@@ -4,6 +4,9 @@
 Whenever we want to visit a place, we would like to hear first hand information from people who have been there or stayed there.
 The application provides a collated platform for travel enthusiasts and bloggers to share their experiences and a medium for people to explore the nuances of a city.
 
+##Pivotal
+[Pivotal Tracker](https://www.pivotaltracker.com/n/projects/1446810)
+
 ##Team Members:
 * Yashaswi Alladi<br\>
 <img src=https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/000/22b/20a/2ed8106.jpg width=200 height=200>
@@ -14,4 +17,3 @@ The application provides a collated platform for travel enthusiasts and bloggers
 * Avneet Oberoi<br\>
 <img src=https://scontent-lax3-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/10888448_1029450547070273_5943787077624982587_n.jpg?oh=2fc2dead39a95c40eca1f06364149e9e&oe=5690A611 width=200 height=200>
 
-[Pivotal Tracker](https://www.pivotaltracker.com/n/projects/1446810)

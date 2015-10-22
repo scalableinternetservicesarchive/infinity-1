@@ -4092,3 +4092,252 @@ Started GET "/assets/css/images/overlay.png" for ::1 at 2015-10-18 22:48:47 -070
 
 
 Started GET "/assets/images/banner.jpg" for ::1 at 2015-10-18 22:48:47 -0700
+
+
+Started GET "/footprints" for 127.0.0.1 at 2015-10-21 20:23:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (79.7ms)
+Completed 200 OK in 361ms (Views: 349.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/css/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/css/style-xsmall.self-b58f392dbec4fa80d6f356b0d50b39375d0ddaced3c5f31f1485ff9a821484e9.css?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/css/skel.self-6fb3ad6974605ae9dc4b741cb8b211338b1f2c66d04832ca7005dfc1aa20b3ff.css?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/css/style-large.self-03365cc1259b1746057c5174dbc539806ffb858565ca51ba8d1775849e32e6ec.css?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/css/style-medium.self-41fc226da5593d2ace686035e65175424f6bf4d8023e52ebb85b6baa512d1729.css?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/css/style-small.self-5f73770a08ce53fca4e11ee1d70412d920cf55c1f9f2104c34e4f5b70443898f.css?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/css/style-xlarge.self-0b41b587cbfc8ccf2a03877d86d727b6442a1fec26c8f7efb6489b4141a64abe.css?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/css/style.self-cc91c5128b6f3a4c35517d21884d23b3e7980c6e35605ce5a53f625bad78ff4b.css?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/custom.self-f53468af9d1126953f6efd5054512f77e66e3fc480d7a82d56c9d149f4b395da.css?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/footprints.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/scaffolds.self-cbe8f2120dd0f8097bbf0097372808d18c8b0deb33e105a98c70dfd650cf8a42.css?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/footprints.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started GET "/assets/css/font-awesome.min.css" for 127.0.0.1 at 2015-10-21 20:23:49 -0700
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-10-21 20:24:24 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OTYyBMXYn492tgqr2+WgO2LTK0h7aHZogqRSI2m0VUDLPSkRdNUOQC6uogsoFvgRe4kYmWm7XPEMpD3SR/LSIw==", "user"=>{"email"=>"yash@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "yash@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2015-10-22 03:24:24.769069"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 2], ["updated_at", "2015-10-22 03:24:24.770421"], ["id", 2]]
+  [1m[36m (133.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/footprints
+Completed 302 Found in 268ms (ActiveRecord: 134.2ms)
+
+
+Started GET "/footprints" for 127.0.0.1 at 2015-10-21 20:24:24 -0700
+Processing by FootprintsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered footprints/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 96ms (Views: 90.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/css/font-awesome.min.css" for 127.0.0.1 at 2015-10-21 20:24:25 -0700
+
+
+Started GET "/footprints" for 127.0.0.1 at 2015-10-21 20:24:55 -0700
+Processing by FootprintsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered footprints/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 89ms (Views: 85.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-10-21 20:24:59 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-21 20:24:59 -0700
+Processing by FootprintsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered footprints/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 102ms (Views: 100.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 127.0.0.1 at 2015-10-21 20:24:59 -0700
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-10-21 20:25:21 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-21 20:25:21 -0700
+Processing by FootprintsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered footprints/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 97ms (Views: 95.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/css/font-awesome.min.css" for 127.0.0.1 at 2015-10-21 20:25:22 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/shared/_links.html.erb (0.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 72ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/css/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/css/skel.self-6fb3ad6974605ae9dc4b741cb8b211338b1f2c66d04832ca7005dfc1aa20b3ff.css?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/css/style-large.self-03365cc1259b1746057c5174dbc539806ffb858565ca51ba8d1775849e32e6ec.css?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/css/style-medium.self-41fc226da5593d2ace686035e65175424f6bf4d8023e52ebb85b6baa512d1729.css?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/css/style-xlarge.self-0b41b587cbfc8ccf2a03877d86d727b6442a1fec26c8f7efb6489b4141a64abe.css?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/css/style-small.self-5f73770a08ce53fca4e11ee1d70412d920cf55c1f9f2104c34e4f5b70443898f.css?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/css/style-xsmall.self-b58f392dbec4fa80d6f356b0d50b39375d0ddaced3c5f31f1485ff9a821484e9.css?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/css/style.self-cc91c5128b6f3a4c35517d21884d23b3e7980c6e35605ce5a53f625bad78ff4b.css?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/custom.self-f53468af9d1126953f6efd5054512f77e66e3fc480d7a82d56c9d149f4b395da.css?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/footprints.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/scaffolds.self-cbe8f2120dd0f8097bbf0097372808d18c8b0deb33e105a98c70dfd650cf8a42.css?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/footprints.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/assets/css/font-awesome.min.css" for 127.0.0.1 at 2015-10-21 20:25:42 -0700
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-10-21 20:25:47 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered users/shared/_links.html.erb (0.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 71ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-10-21 20:25:57 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 110ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-10-21 20:26:02 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered users/shared/_links.html.erb (0.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 74ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-10-21 20:27:54 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered users/shared/_links.html.erb (0.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 62ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-10-21 20:28:19 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ff+b/dTWkFcKiatLm6nNxDG5GSK128ZVFuZRAbmgunOehCLlHdm8NHyBAp0vbNNo3QGF7gihew9zFASxFqRuQ==", "user"=>{"email"=>"yash@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "yash@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-22 03:24:24.769069"], ["current_sign_in_at", "2015-10-22 03:28:19.852818"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 3], ["updated_at", "2015-10-22 03:28:19.853566"], ["id", 2]]
+  [1m[36m (295.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 385ms (ActiveRecord: 295.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-21 20:28:20 -0700
+Processing by FootprintsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered footprints/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 127.0.0.1 at 2015-10-21 20:28:20 -0700
+
+
+Started GET "/assets/css/font-awesome.min.css" for 127.0.0.1 at 2015-10-21 20:28:20 -0700

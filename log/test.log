@@ -26,3 +26,1798 @@
   [1m[36m (133.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151016235703')[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 03:53:08', '2015-10-22 03:53:08', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 03:53:08', '2015-10-22 03:53:08', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 03:53:08', '2015-10-22 03:53:08', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 03:53:08', '2015-10-22 03:53:08', 298486374)
+  [1m[36m (178.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 03:56:50', '2015-10-22 03:56:50', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 03:56:50', '2015-10-22 03:56:50', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 03:56:50', '2015-10-22 03:56:50', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 03:56:50', '2015-10-22 03:56:50', 298486374)
+  [1m[36m (200.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:00:14', '2015-10-22 04:00:14', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:00:14', '2015-10-22 04:00:14', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:00:14', '2015-10-22 04:00:14', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:00:14', '2015-10-22 04:00:14', 298486374)
+  [1m[36m (159.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:00:54', '2015-10-22 04:00:54', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:00:54', '2015-10-22 04:00:54', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:00:54', '2015-10-22 04:00:54', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:00:54', '2015-10-22 04:00:54', 298486374)
+  [1m[36m (178.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:01:13', '2015-10-22 04:01:13', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:01:13', '2015-10-22 04:01:13', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:01:13', '2015-10-22 04:01:13', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:01:13', '2015-10-22 04:01:13', 298486374)
+  [1m[36m (170.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:05:01', '2015-10-22 04:05:01', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:05:01', '2015-10-22 04:05:01', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:05:01', '2015-10-22 04:05:01', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:05:01', '2015-10-22 04:05:01', 298486374)
+  [1m[36m (191.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:05:11', '2015-10-22 04:05:11', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:05:11', '2015-10-22 04:05:11', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:05:11', '2015-10-22 04:05:11', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:05:11', '2015-10-22 04:05:11', 298486374)
+  [1m[36m (162.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:06:23', '2015-10-22 04:06:23', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:06:23', '2015-10-22 04:06:23', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:06:23', '2015-10-22 04:06:23', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:06:23', '2015-10-22 04:06:23', 298486374)
+  [1m[36m (213.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:06:30', '2015-10-22 04:06:30', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:06:30', '2015-10-22 04:06:30', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:06:30', '2015-10-22 04:06:30', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:06:30', '2015-10-22 04:06:30', 298486374)
+  [1m[36m (167.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.3ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:06:41', '2015-10-22 04:06:41', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:06:41', '2015-10-22 04:06:41', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:06:41', '2015-10-22 04:06:41', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:06:41', '2015-10-22 04:06:41', 298486374)
+  [1m[36m (169.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:07:12', '2015-10-22 04:07:12', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:07:12', '2015-10-22 04:07:12', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:07:12', '2015-10-22 04:07:12', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:07:12', '2015-10-22 04:07:12', 298486374)
+  [1m[36m (235.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:08:22', '2015-10-22 04:08:22', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:08:22', '2015-10-22 04:08:22', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:08:22', '2015-10-22 04:08:22', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:08:22', '2015-10-22 04:08:22', 298486374)
+  [1m[36m (180.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:08:55', '2015-10-22 04:08:55', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:08:55', '2015-10-22 04:08:55', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:08:55', '2015-10-22 04:08:55', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:08:55', '2015-10-22 04:08:55', 298486374)
+  [1m[36m (169.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:09:31', '2015-10-22 04:09:31', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:09:31', '2015-10-22 04:09:31', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:09:31', '2015-10-22 04:09:31', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:09:31', '2015-10-22 04:09:31', 298486374)
+  [1m[36m (212.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:10:09', '2015-10-22 04:10:09', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:10:09', '2015-10-22 04:10:09', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:10:09', '2015-10-22 04:10:09', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:10:09', '2015-10-22 04:10:09', 298486374)
+  [1m[36m (204.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:20:39', '2015-10-22 04:20:39', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:20:39', '2015-10-22 04:20:39', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:20:39', '2015-10-22 04:20:39', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:20:39', '2015-10-22 04:20:39', 298486374)
+  [1m[36m (172.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[36mFootprint Load (0.2ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:21:19', '2015-10-22 04:21:19', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:21:19', '2015-10-22 04:21:19', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:21:19', '2015-10-22 04:21:19', 980190962)[0m
+  [1m[35m (164.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.2ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:22:35', '2015-10-22 04:22:35', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:22:35', '2015-10-22 04:22:35', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:22:35', '2015-10-22 04:22:35', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:22:35', '2015-10-22 04:22:35', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('yash@gmail.com', 'footprints', '2015-10-22 04:22:35', '2015-10-22 04:22:35', 113629430)[0m
+  [1m[35m (180.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[35mFootprint Load (0.2ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:23:24', '2015-10-22 04:23:24', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:23:24', '2015-10-22 04:23:24', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:23:24', '2015-10-22 04:23:24', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:23:24', '2015-10-22 04:23:24', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('yash@gmail.com', 'footprints', '2015-10-22 04:23:24', '2015-10-22 04:23:24', 113629430)[0m
+  [1m[35m (163.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[35mFootprint Load (0.2ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.4ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("id", "created_at", "updated_at") VALUES (1, '2015-10-22 04:26:05', '2015-10-22 04:26:05')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("id", "created_at", "updated_at") VALUES (2, '2015-10-22 04:26:05', '2015-10-22 04:26:05')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:26:05', '2015-10-22 04:26:05', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:26:05', '2015-10-22 04:26:05', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('yash@gmail.com', 'footprints', '2015-10-22 04:26:05', '2015-10-22 04:26:05', 113629430)[0m
+  [1m[35m (160.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.2ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 1]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 1]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"1"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:28:12', '2015-10-22 04:28:12', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:28:12', '2015-10-22 04:28:12', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:28:12', '2015-10-22 04:28:12', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:28:12', '2015-10-22 04:28:12', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('yash@gmail.com', 'footprints', '2015-10-22 04:28:12', '2015-10-22 04:28:12', 113629430)[0m
+  [1m[35m (205.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.2ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "footprints"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:31:30', '2015-10-22 04:31:30', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "footprints" ("created_at", "updated_at", "id") VALUES ('2015-10-22 04:31:30', '2015-10-22 04:31:30', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('avneetoberoi15@gmail.com', 'footprints', '2015-10-22 04:31:30', '2015-10-22 04:31:30', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('maulishah91@gmail.com', 'footprints', '2015-10-22 04:31:30', '2015-10-22 04:31:30', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('yash@gmail.com', 'footprints', '2015-10-22 04:31:30', '2015-10-22 04:31:30', 113629430)[0m
+  [1m[35m (165.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+FootprintsControllerTest: test_should_destroy_footprint
+-------------------------------------------------------
+  [1m[35mFootprint Load (0.2ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+Processing by FootprintsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+FootprintsControllerTest: test_should_get_edit
+----------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+FootprintsControllerTest: test_should_show_footprint
+----------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+FootprintsControllerTest: test_should_create_footprint
+------------------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "footprints"
+Processing by FootprintsController#create as HTML
+  Parameters: {"footprint"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "footprints"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+FootprintsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+FootprintsControllerTest: test_should_get_new
+---------------------------------------------
+  [1m[36mFootprint Load (0.1ms)[0m  [1mSELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by FootprintsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------
+FootprintsControllerTest: test_should_update_footprint
+------------------------------------------------------
+  [1m[35mFootprint Load (0.1ms)[0m  SELECT  "footprints".* FROM "footprints" WHERE "footprints"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by FootprintsController#update as HTML
+  Parameters: {"footprint"=>{"id"=>"1"}, "id"=>"980190962"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  Rendered text template (0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m

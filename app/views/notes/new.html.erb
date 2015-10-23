@@ -5,7 +5,7 @@
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
         <a href="#">
-          Hi <%current_user.email%>
+          Hi <%@user.name%>
         </a>
       </li>
       <li>
@@ -14,7 +14,11 @@
       <li>
         <%= link_to "My Notes", new_note_path %>
       </li>
-
+      <li>
+        <%= link_to 'Check my profile', current_user %>
+      </li><li>
+      <%= link_to "Edit Profile", edit_user_registration_path %>
+    </li>
     </ul>
   </div>
   <!-- /#sidebar-wrapper -->

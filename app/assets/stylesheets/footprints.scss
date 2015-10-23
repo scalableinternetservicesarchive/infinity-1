@@ -1,11 +1,116 @@
-.jumbotron
-{
+.jumbotron {
   background: image_url('pic02.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 300px;
 }
-
 .vertical-center {
   align-items: center;
+}
+.panel-shadow {
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+.panel-white {
+  border: 1px solid #dddddd;
+  .panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+  }
+  .panel-footer {
+    background-color: #fff;
+    border-color: #ddd;
+  }
+}
+.post {
+  .post-heading {
+    height: 95px;
+    padding: 20px 15px;
+    .avatar {
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin-right: 15px;
+    }
+    .meta {
+      .title {
+        margin-bottom: 0;
+        a {
+          color: black;
+          &:hover {
+            color: #aaaaaa;
+          }
+        }
+      }
+      .time {
+        margin-top: 8px;
+        color: #999;
+      }
+    }
+  }
+  .post-description {
+    padding: 15px;
+    p {
+      font-size: 14px;
+    }
+    .stats {
+      margin-top: 20px;
+      .stat-item {
+        display: inline-block;
+        margin-right: 15px;
+        .icon {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  .post-footer {
+    border-top: 1px solid #ddd;
+    padding: 15px;
+    .comments-list {
+      padding: 0;
+      margin-top: 20px;
+      list-style-type: none;
+      .comment {
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+        .avatar {
+          width: 35px;
+          height: 35px;
+        }
+        .comment-heading {
+          display: block;
+          width: 100%;
+          .user {
+            font-size: 14px;
+            font-weight: bold;
+            display: inline;
+            margin-top: 0;
+            margin-right: 10px;
+          }
+          .time {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 0;
+            display: inline;
+          }
+        }
+        .comment-body {
+          margin-left: 50px;
+        }
+        > .comments-list {
+          margin-left: 50px;
+        }
+      }
+    }
+    .input-group-addon a {
+      color: #454545;
+    }
+  }
+  .post-image .image {
+    width: 100%;
+    height: auto;
+  }
 }

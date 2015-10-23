@@ -1,3 +1,11 @@
-// Place all the styles related to the Footprints controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.jumbotron
+{
+  background: image_url('pic02.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+}
+
+.vertical-center {
+  align-items: center;
+}

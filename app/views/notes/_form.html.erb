@@ -1,0 +1,29 @@
+<%= form_for(@note) do |f| %>
+  <% if @note.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@note.errors.count, "error") %> prohibited this note from being saved:</h2>
+
+      <ul>
+      <% @note.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= label_tag(:title, "TITLE") %>
+    <%= f.text_field :title %><br/>
+    <%= label_tag(:city, "CITY") %>
+
+    <%= f.text_field :city%><br/>
+    <%= label_tag(:content, "NOTE") %>
+
+    <%= f.text_area :content%><br/>
+    <%= label_tag(:tags, "TAGS") %>
+
+    <%= f.text_field :tags %><br/>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

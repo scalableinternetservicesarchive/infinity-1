@@ -16,9 +16,11 @@
     <%= link_to "sample app", '#', id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
         <li><%= link_to "Home",   '#' %></li>
         <li><%= link_to "Help",   '#' %></li>
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+        <% end %>
       </ul>
     </nav>
   </div>

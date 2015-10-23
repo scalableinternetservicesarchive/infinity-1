@@ -1,5 +1,4 @@
-<div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
+<div id="wrapper">
 
   <!-- Sidebar -->
   <div id="sidebar-wrapper">
@@ -10,12 +9,16 @@
         </a>
       </li>
       <li>
-        <a href="#">News Feed</a>
+        <%= link_to "News Feed", footprint_path %>
       </li>
       <li>
-        <%= link_to "My Notes", notes_path %>
+        <%= link_to "My Notes", new_note_path %>
       </li>
-
+      <li>
+      <%= link_to 'Check my profile', current_user %>
+      </li><li>
+      <%= link_to "View Profile", edit_user_registration_path %>
+    </li>
     </ul>
   </div>
   <!-- /#sidebar-wrapper -->
@@ -30,7 +33,7 @@
               <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
                 <input type="text" class="form-control" placeholder="Discover new places,share expereinces,meet people" aria-describedby="sizing-addon1">
-              </div>
+              </div><br/>
               <%= link_to "Search", '#', class: "btn btn-lg btn-primary", type: "submit" %>
 
             </form>
@@ -38,15 +41,8 @@
           </div>
         </div>
 
-          <%= link_to image_tag("rails.png", alt: "Rails logo"),
-                      'http://rubyonrails.org/' %>
+
+      </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- /#page-content-wrapper -->
-<%= link_to "Check my profile", current_user %>
-
-<%= link_to "View Profile", edit_user_registration_path %>
-
-</div>

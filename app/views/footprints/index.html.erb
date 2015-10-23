@@ -6,7 +6,7 @@
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
         <a href="#">
-          Hi <%current_user.email%>
+          Hi <%= @user.first_name %>
         </a>
       </li>
       <li>
@@ -45,5 +45,8 @@
     </div>
   </div>
   <!-- /#page-content-wrapper -->
+<%= link_to "Check my profile", current_user %>
+
+<%= link_to "View Profile", edit_user_registration_path %>
 
 </div>

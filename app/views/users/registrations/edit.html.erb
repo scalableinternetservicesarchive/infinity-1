@@ -3,6 +3,18 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
+  <div><%= f.label :first_name %><br />
+  <%= f.text_field :first_name, autofocus: true %></div>
+
+  <div><%= f.label :last_name %><br />
+  <%= f.text_field :last_name, autofocus: true %></div>
+
+    <div><%= f.radio_button :is_female, true %> <%= f.label :is_female, "Female" %> </div>
+    <div><%= f.radio_button :is_female, false %> <%= f.label :is_female, "Male" %> </div><br/>
+
+    <div><%= f.label :date_of_birth %><br />
+      <%= f.date_select :date_of_birth, :start_year => 1975  %></div>
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -26,6 +38,9 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
+
+  <div><%= f.label :interests %><br />
+  <%= f.text_field :interests, :placeholder => 'Share your interests..', autofocus: true %></div>
 
   <div class="actions">
     <%= f.submit "Update" %>

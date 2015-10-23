@@ -8,4 +8,6 @@
   <%= link_to "Let's take a tour", '#', class: "btn btn-lg btn-primary" %>
 </div>
 
-<%= link_to "Check my profile", "footprints/show" %>
+<%= link_to "Check my profile", current_user %>
+
+<%= link_to "Change your password", edit_user_registration_path %>

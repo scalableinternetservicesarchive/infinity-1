@@ -35,7 +35,6 @@
             <div style="border: dashed; width:150px;"><%= image_tag @user.picture_url.to_s if @user.picture?%></div>
             "To travel is to take a journey into yourself." <br/>
           <div><h3> <%= @user.first_name %> <%= @user.last_name %></h3></div>
-          <div><h5>Born on  <%= @user.date_of_birth.strftime('%v')%></h5> </div>
         </div>
       </div>
     </div>

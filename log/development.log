@@ -5665,3 +5665,347 @@ Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.1ms)
 
 
 Started GET "/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png" for 127.0.0.1 at 2015-10-21 21:46:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateNotes (20151022062808)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "city" varchar, "title" varchar, "uid" integer, "content" text, "tags" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151022062808"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddPictureToUsers (20151030071527)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "picture" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151030071527"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2015-10-30 11:27:28 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FootprintsController#index as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2015-10-30 11:27:28 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 3772ms (Views: 3758.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/d/users/sign_in" for ::1 at 2015-10-30 11:27:36 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4gUUkgr3y/mJTUYAoN4q1AdzOBg/+TZEsJtCjwfjBW557AX9E3fELk9efxCGAou315TlBleeiw4UTRKwGpXQBw==", "user"=>{"email"=>"avneetoberoi15@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "avneetoberoi15@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-23 00:35:55.027500"], ["current_sign_in_at", "2015-10-30 18:27:36.346250"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 6], ["updated_at", "2015-10-30 18:27:36.347163"], ["id", 1]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 103ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2015-10-30 11:27:36 -0700
+Processing by FootprintsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered footprints/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 136ms (Views: 134.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-30 11:27:39 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    35:             <div style="border: dashed; width:150px;"><%= image_tag @user.picture_url.to_s if @user.picture?%></div>
+    36:             "To travel is to take a journey into yourself." <br/>
+    37:           <div><h3> <%= @user.first_name %> <%= @user.last_name %></h3></div>
+    38:           <div><h5>Born on  <%= @user.date_of_birth.strftime('%v')%></h5> </div>
+    39:         </div>
+    40:       </div>
+    41:     </div>
+  app/views/users/show.html.erb:38:in `_app_views_users_show_html_erb__1733071600591319715_70099667463100'
+
+
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.8ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (101.0ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-30 11:27:40 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    35:             <div style="border: dashed; width:150px;"><%= image_tag @user.picture_url.to_s if @user.picture?%></div>
+    36:             "To travel is to take a journey into yourself." <br/>
+    37:           <div><h3> <%= @user.first_name %> <%= @user.last_name %></h3></div>
+    38:           <div><h5>Born on  <%= @user.date_of_birth.strftime('%v')%></h5> </div>
+    39:         </div>
+    40:       </div>
+    41:     </div>
+  app/views/users/show.html.erb:38:in `_app_views_users_show_html_erb__1733071600591319715_70099607558540'
+
+
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.0ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (85.7ms)
+
+
+Started GET "/" for ::1 at 2015-10-30 11:31:04 -0700
+Processing by FootprintsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered footprints/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 134ms (Views: 132.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-30 11:31:04 -0700
+Processing by FootprintsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered footprints/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 105ms (Views: 103.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-30 11:31:07 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    35:             <div style="border: dashed; width:150px;"><%= image_tag @user.picture_url.to_s if @user.picture?%></div>
+    36:             "To travel is to take a journey into yourself." <br/>
+    37:           <div><h3> <%= @user.first_name %> <%= @user.last_name %></h3></div>
+    38:           <!--<div><h5>Born on  <%= @user.date_of_birth.strftime('%v')%></h5> </div>-->
+    39:         </div>
+    40:       </div>
+    41:     </div>
+  app/views/users/show.html.erb:38:in `_app_views_users_show_html_erb__1733071600591319715_70099629535880'
+
+
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.0ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.8ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.9ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-30 11:31:08 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    35:             <div style="border: dashed; width:150px;"><%= image_tag @user.picture_url.to_s if @user.picture?%></div>
+    36:             "To travel is to take a journey into yourself." <br/>
+    37:           <div><h3> <%= @user.first_name %> <%= @user.last_name %></h3></div>
+    38:           <!--<div><h5>Born on  <%= @user.date_of_birth.strftime('%v')%></h5> </div>-->
+    39:         </div>
+    40:       </div>
+    41:     </div>
+  app/views/users/show.html.erb:38:in `_app_views_users_show_html_erb__1733071600591319715_70099582543900'
+
+
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.0ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/avneet/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.3ms)
+
+
+Started GET "/" for ::1 at 2015-10-30 11:31:27 -0700
+Processing by FootprintsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered footprints/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 129ms (Views: 127.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-30 11:31:29 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 109ms (Views: 107.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes/new" for ::1 at 2015-10-30 11:31:37 -0700
+Processing by NotesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered notes/_form.html.erb (5.1ms)
+  Rendered notes/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 111ms (Views: 103.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-30 11:31:41 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 99ms (Views: 97.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/d/users/edit" for ::1 at 2015-10-30 11:32:02 -0700
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered users/registrations/edit.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 139ms (Views: 137.2ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/d/users" for ::1 at 2015-10-30 11:33:52 -0700
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FBmU4kby5AxbojJpT/gbNr5dw3bW85JRtk7MOeFLs6iZUorRaidsgincPh51O6y8ci/ztfupVXcbQVsHAevRSA==", "user"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x007f82b25e3238 @tempfile=#<Tempfile:/var/folders/vj/tsbb_1sn13g6vw5s_1x_xn9h0000gn/T/RackMultipart20151030-5357-wmjnfz.jpg>, @original_filename="pic05.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[picture]\"; filename=\"pic05.jpg\"\r\nContent-Type: image/jpeg\r\n">, "first_name"=>"", "last_name"=>"", "is_female"=>"false", "date_of_birth(1i)"=>"2015", "date_of_birth(2i)"=>"10", "date_of_birth(3i)"=>"30", "email"=>"avneetoberoi15@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "interests"=>""}, "commit"=>"Update"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: password_confirmation
+  Rendered users/registrations/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 223ms (Views: 133.0ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/d/users" for ::1 at 2015-10-30 11:34:12 -0700
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vskTD/WrTrBkFBUcWzbb2KvrqhjVu6Ai4cjJbFZhxYUzgg082X7GPhZqGWth9WxSZ5ma2/jhZwRMx15StsGnZQ==", "user"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x007f82aa2aa538 @tempfile=#<Tempfile:/var/folders/vj/tsbb_1sn13g6vw5s_1x_xn9h0000gn/T/RackMultipart20151030-5357-1kyg02y.jpg>, @original_filename="pic04.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[picture]\"; filename=\"pic04.jpg\"\r\nContent-Type: image/jpeg\r\n">, "first_name"=>"", "last_name"=>"", "is_female"=>"false", "date_of_birth(1i)"=>"2015", "date_of_birth(2i)"=>"10", "date_of_birth(3i)"=>"30", "email"=>"avneetoberoi15@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "interests"=>""}, "commit"=>"Update"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: password_confirmation
+  Rendered users/registrations/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 282ms (Views: 126.8ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/d/users" for ::1 at 2015-10-30 11:34:38 -0700
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"35AdhDxA5MnLw+QHCRn1BbtnRghVuk0AEUBYzWf+bEdS2wO3EJVsR7m96HAz2kKPdxV2y3jgiia8T8/zh14Opw==", "user"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x007f82a94a8138 @tempfile=#<Tempfile:/var/folders/vj/tsbb_1sn13g6vw5s_1x_xn9h0000gn/T/RackMultipart20151030-5357-1ta7s0n.jpg>, @original_filename="pic03.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[picture]\"; filename=\"pic03.jpg\"\r\nContent-Type: image/jpeg\r\n">, "first_name"=>"", "last_name"=>"", "is_female"=>"false", "date_of_birth(1i)"=>"2015", "date_of_birth(2i)"=>"10", "date_of_birth(3i)"=>"30", "email"=>"avneetoberoi15@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "interests"=>""}, "commit"=>"Update"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: password_confirmation
+  Rendered users/registrations/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 248ms (Views: 98.8ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/d/users" for ::1 at 2015-10-30 11:35:02 -0700
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MJuqw0fkL0QHRoVZ+gssIX3zlQkbAS8BEbUcOEQ2HN+90LTwazGnynU4iS7AyJursYGlyjZb6Ce8uosGpJZ+Pw==", "user"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x007f82b0e91800 @tempfile=#<Tempfile:/var/folders/vj/tsbb_1sn13g6vw5s_1x_xn9h0000gn/T/RackMultipart20151030-5357-14bx83y.jpg>, @original_filename="pic04.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[picture]\"; filename=\"pic04.jpg\"\r\nContent-Type: image/jpeg\r\n">, "first_name"=>"", "last_name"=>"", "is_female"=>"false", "date_of_birth(1i)"=>"2015", "date_of_birth(2i)"=>"10", "date_of_birth(3i)"=>"30", "email"=>"avneetoberoi15@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "interests"=>""}, "commit"=>"Update"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: password_confirmation
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "first_name" = ?, "last_name" = ?, "interests" = ?, "picture" = ?, "date_of_birth" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["first_name", ""], ["last_name", ""], ["interests", ""], ["picture", "pic04.jpg"], ["date_of_birth", "2015-10-30 00:00:00.000000"], ["updated_at", "2015-10-30 18:35:02.369902"], ["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 83ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-30 11:35:02 -0700
+Processing by FootprintsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered footprints/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 114ms (Views: 112.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for ::1 at 2015-10-30 11:35:05 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 123ms (Views: 121.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/notes/new" for ::1 at 2015-10-30 11:35:23 -0700
+Processing by NotesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered notes/_form.html.erb (1.1ms)
+  Rendered notes/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 116ms (Views: 114.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/notes/new" for ::1 at 2015-10-30 11:36:05 -0700
+Processing by NotesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered notes/_form.html.erb (1.1ms)
+  Rendered notes/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 112ms (Views: 110.7ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToNotes (20151030184056)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "notes" ADD "user_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151030184056"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+

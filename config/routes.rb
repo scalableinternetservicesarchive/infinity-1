@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   devise_for :users, :path_prefix => 'd'
   resources :users, :only => [:show]
   resources :notes

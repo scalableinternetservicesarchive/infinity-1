@@ -30,20 +30,34 @@
   <!-- Page Content -->
   <div id="page-content-wrapper">
     <div class="container-fluid">
+      <div class="row" style="background: #c0dfd9">
+        <div class="col-lg-3" >
+          <br/>
+          <%= image_tag @user.picture_url.to_s , :class => "img-thumbnail" , :style => "width:200px"  if @user.picture? %>
+          <br/><br/>
+        </div>
+
+        <div class="col-lg-9" style="font-family: Monaco">
+          <br/>
+          <h1>"To travel is to take a journey into yourself." </h1><br/>
+            <br/>
+        </div>
+    </div>
       <div class="row">
         <div class="col-lg-12">
-            <div style="border: dashed; width:150px;"><%= image_tag @user.picture_url.to_s if @user.picture?%></div>
-            "To travel is to take a journey into yourself." <br/>
-          <div><h3> <%= @user.first_name %> <%= @user.last_name %></h3></div>
-          <div><h5>Born on  <%= @user.date_of_birth.strftime('%v')%></h5> </div>
+          <h3>User Information</h3>
+          <h5>Name: <%= @user.first_name %> <%= @user.last_name %></h5>
+          <h5>Born on:  <%= @user.date_of_birth.strftime('%v')%></h5>
+          <h5>Interests:  <%= @user.interests%></h5>
+          <h5>Email:  <%= @user.email%></h5>
+
         </div>
       </div>
-    </div>
   </div>
 </div>
 <!-- /#page-content-wrapper -->
 
-
+</div>
 
 
 

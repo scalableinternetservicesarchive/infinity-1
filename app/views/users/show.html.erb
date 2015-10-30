@@ -15,7 +15,7 @@
         <%= link_to "Add Notes", new_note_path %>
       </li>
       <li>
-        My Interests
+        <%= link_to "Add interest", :controller => "users", :action => 'show_categories' %>
       </li>
      <li>
       <%= link_to "Edit Profile", edit_user_registration_path %>

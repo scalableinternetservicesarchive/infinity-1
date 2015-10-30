@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :categories
   devise_for :users, :path_prefix => 'd'
+  get '/users/categories', to: 'users#show_categories'
   resources :users, :only => [:show]
   resources :notes
   # The priority is based upon order of creation: first created -> highest priority.

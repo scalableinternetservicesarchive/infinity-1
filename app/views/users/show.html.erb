@@ -1,19 +1,52 @@
-<div class="center jumbotron">
-  <h1>Howdy, <%= @user.first_name %></h1>
+<div id="wrapper">
 
-  <h2>
-    This is my user profile
-  </h2>
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">
+          Hi <%= @user.first_name %>
+        </a>
+      </li>
+      <li>
+       My Notes
+      </li>
+      <li>
+        <%= link_to "Add Notes", new_note_path %>
+      </li>
+      <li>
+        My Interests
+      </li>
+     <li>
+      <%= link_to "Edit Profile", edit_user_registration_path %>
+    </li>
+      <li>
+        <%= link_to "Back", :back %>
+      </li>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
 
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+            <div style="border: dashed; width:150px;"><%= image_tag @user.picture_url.to_s if @user.picture?%></div>
+            "To travel is to take a journey into yourself." <br/>
+          <div><h3> <%= @user.first_name %> <%= @user.last_name %></h3></div>
+          <div><h5>Born on  <%= @user.date_of_birth.strftime('%v')%></h5> </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<!-- /#page-content-wrapper -->
 
 
 
 
-    <div>Name: <%= @user.first_name %> <%= @user.last_name %><br /></div>
-    <div> Date of birth: <%= @user.date_of_birth%>  </div>
 
 
 
-<%= link_to "Back", :back %>
 

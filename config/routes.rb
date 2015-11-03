@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+
+  get '/cities/search', to:  'cities#search'
+  resources :cities
   resources :categories
   devise_for :users, :path_prefix => 'd'
   get '/users/categories', to: 'users#show_categories'
   resources :users, :only => [:show]
   resources :notes
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

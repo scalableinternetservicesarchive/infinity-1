@@ -31,10 +31,11 @@
 <h1> Please edit your Interests, <%= @user.first_name %></h1>
     <tr>
 <center>
-<table border = 1>
+<table >
   <%=form_tag({controller: "categories", action: "submit_categories"}, method: "get" ) do %>
   <% @allcategories.each do |category| %>
       <tr>
+        <td><%=image_tag(category.name+".jpg",:class => "img-thumbnail", height: '400', width: '400') %></td>
         <td><%= check_box_tag 'cat[]',category.name, (@user_categories.include? category) == true %></td>
         <td><%= h category.name %></td>
 

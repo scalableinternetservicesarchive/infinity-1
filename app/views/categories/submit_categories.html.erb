@@ -1,8 +1,34 @@
+<div id="wrapper">
 
-<html><head/><body><h1>Your interests have been updated:</h1>
+<!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">
+          <%= @user.first_name %>
+        </a>
+      </li>
+      <li>
+        My Notes
+      </li>
+      <li>
+        <%= link_to "Add Notes", new_note_path %>
+      </li>
+      <li>
+        <%= link_to "Edit interests", "/categories/edit_categories" %>
+      </li>
+      <li>
+        <%= link_to "Edit Profile", edit_user_registration_path %>
+      </li>
+      <li>
+        <%= link_to "Back", :back %>
+      </li>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
+<body><h1><font color="blue"> Your interests have been updated to:</font></h1>
 <%@interests.each do |g| %>
     <h3><%=g%></h3>
 <%end%>
-
-
-    </body></html>
+</body>
+</div>

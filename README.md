@@ -9,7 +9,7 @@ The application provides a collated platform for travel enthusiasts and bloggers
 
 ##Team Members:
 * Yashaswi Alladi<br\>
-<img src=https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/000/22b/20a/2ed8106.jpg width=200 height=200>
+<img src=https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAWPAAAAJDRhMmQ3YTk1LTU2NzctNDUwYi05NTZkLTg5YzdhYWZkOTczNQ.jpg width=200 height=200>
 * Mauli Shah<br\>
 <img src=https://scontent-lax3-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/46153_425680594421_2222946_n.jpg?oh=de97c6ec0c112271888c7984e1b91d82&oe=568B35A0 width=240 height=200>
 * Ashish Nerkar<br\>

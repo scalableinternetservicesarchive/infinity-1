@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/categories/edit_categories', to: 'categories#edit_categories'
+  get '/categories/submit_categories', to: 'categories#submit_categories'
   resources :categories
   devise_for :users, :path_prefix => 'd'
   get '/users/categories', to: 'users#show_categories'

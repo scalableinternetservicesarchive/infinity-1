@@ -1,0 +1,49 @@
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">
+          <%= @user.first_name %>
+        </a>
+      </li>
+      <li>
+        My Notes
+      </li>
+      <li>
+        <%= link_to "Add Notes", new_note_path %>
+      </li>
+      <li>
+        <%= link_to "Edit interests", "/categories/edit_categories" %>
+      </li>
+      <li>
+        <%= link_to "Edit Profile", edit_user_registration_path %>
+      </li>
+      <li>
+        <%= link_to "Back", :back %>
+      </li>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
+<p id="notice"><%= notice %></p>
+
+<h1> Please edit your Interests, <%= @user.first_name %></h1>
+    <tr>
+<center>
+<table >
+  <%=form_tag({controller: "categories", action: "submit_categories"}, method: "get" ) do %>
+  <% @allcategories.each do |category| %>
+      <tr>
+        <td><%=image_tag(category.name+".jpg",:class => "img-thumbnail", height: '400', width: '400') %></td>
+        <td><%= check_box_tag 'cat[]',category.name, (@user_categories.include? category) == true %></td>
+        <td><%= h category.name %></td>
+
+      </tr><br/>
+  <% end %>
+  </table>
+  </center>
+<br/>
+    <center><div><%= submit_tag 'Save' %></div></center>
+<%end%>
+</div>

@@ -5,11 +5,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def show_categories
-    @user =  current_user
-    @allcategories = Category.all
-    @foo = 'bar'
-  end
 
   private
 

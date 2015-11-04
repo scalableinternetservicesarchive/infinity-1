@@ -1,0 +1,20 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1> Edit Your Intersts, <%= @user.first_name %></h1>
+    <tr>
+<center>
+<table border = 1>
+  <%=form_tag({controller: "categories", action: "submit_categories"}, method: "get") do %>
+  <% @allcategories.each do |category| %>
+      <tr>
+        <td><%= check_box_tag 'cat[]',category.name, (@user_categories.include? category) == true %></td>
+        <td><%= h category.name %></td>
+
+      </tr><br/>
+  <% end %>
+  </table>
+  </center>
+<br/>
+    <center><div><%= submit_tag 'Save' %></div></center>
+<%end%>

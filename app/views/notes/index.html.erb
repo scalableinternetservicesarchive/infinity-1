@@ -7,14 +7,14 @@
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
         <a href="#">
-          Hi <%current_user.email%>
+          Hi <%@user.first_name%>
         </a>
       </li>
       <li>
         <%= link_to "News Feed", footprint_path %>
       </li>
       <li>
-        <%= link_to "My Notes", new_note_path %>
+        <%= link_to "Add new Notes", new_note_path %>
       </li>
 
     </ul>
@@ -33,43 +33,14 @@
                 <input type="text" class="form-control" placeholder="Discover new places,share expereinces,meet people" aria-describedby="sizing-addon1">
               </div>
               <%= link_to "Search", '#', class: "btn btn-lg btn-primary", type: "submit" %>
-
             </form>
-
           </div>
         </div>
-
-
       </div>
-
     </div>
-    <table>
-      <thead>
-      <tr>
-        <th colspan="3"></th>
-      </tr>
-      </thead>
+    <%= image_tag @user.picture_url.to_s , :class => "img-thumbnail" , :style => "width:200px"  if @user.picture? %>
 
-      <tbody>
-      <% @notes.each do |note| %>
-          <div>
-            <%=note.title%>
-            <%= note.city%>
-            <%= note.content%>
-            <%= note.tags%>
-          </div>
-          <tr>
-            <td><%= link_to 'Show', note %></td>
-            <td><%= link_to 'Edit', edit_note_path(note) %></td>
-            <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-      <% end %>
-      </tbody>
-    </table>
-
+    <%= render :partial => @notes %>
     <br>
-
-    <%= link_to 'New Note', new_note_path %>
-
   </div>
 </div>

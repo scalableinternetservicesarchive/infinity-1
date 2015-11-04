@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   devise_for :users, :path_prefix => 'd'
   get '/users/categories', to: 'users#show_categories'
   resources :users, :only => [:show]
-  resources :notes
+
+  resources :notes do
+    resources :comments, :only => [:create]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

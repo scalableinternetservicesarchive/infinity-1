@@ -1,10 +1,17 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
+
+  def notes_params
+    params.require(:post).permit(:title, :body, :comment)
+  end
+
   # GET /notes
   # GET /notes.json
   def index
+    :notes_params
     @notes = Note.all
+    @user =  current_user
   end
 
   # GET /notes/1

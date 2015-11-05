@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
   get '/cities/search', to:  'cities#search'
-  resources :cities
-  resources :categories
+
+  resources :cities do
+    resources :notes, :only => [:create]
+  end
+
+#  resources :cities
+ # resources :categories
   devise_for :users, :path_prefix => 'd'
   get '/users/categories', to: 'users#show_categories'
   resources :users, :only => [:show]

@@ -14073,3 +14073,991 @@ Processing by CitiesController#search as HTML
   [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')[0m
   Rendered cities/search.html.erb within layouts/application (2.1ms)
 Completed 200 OK in 691ms (Views: 686.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cities/search?search=London" for 127.0.0.1 at 2015-11-03 13:23:28 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"London"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.3ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'London')[0m
+  Rendered cities/search.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 250ms (Views: 245.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cities/search?search=London" for 127.0.0.1 at 2015-11-03 13:29:04 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"London"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'London')[0m
+  Rendered cities/search.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:   <div class="col-md-offset-2">
+    41:   <h3>Notes</h3>
+    42: 
+    43:     <% @notes.each do |note| %>
+    44: 
+    45:         <p><%= note.title %></p>
+    46:         <p><%= note.content %></p>
+  app/views/cities/search.html.erb:43:in `_app_views_cities_search_html_erb___2965223582371324791_70084376364900'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (43.4ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-03 13:30:51 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')[0m
+  Rendered cities/search.html.erb within layouts/application (247.1ms)
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 3.0ms)
+
+ActionView::Template::Error (Association named 'cities' was not found on Note; perhaps you misspelled it?):
+    40:   <div class="col-md-offset-2">
+    41:   <h3>Notes</h3>
+    42: 
+    43:     <% @notes.each do |note| %>
+    44: 
+    45:         <p><%= note.title %></p>
+    46:         <p><%= note.content %></p>
+  app/views/cities/search.html.erb:43:in `_app_views_cities_search_html_erb___2965223582371324791_70084376364900'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.1ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-03 13:37:48 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')[0m
+  [1m[35mCity Load (2.1ms)[0m  SELECT `cities`.* FROM `cities` INNER JOIN `notes` ON `notes`.`city_id` = `cities`.`id` WHERE `cities`.`city_name` = 'Los Angeles'
+Mysql2::Error: Unknown column 'notes.city_id' in 'on clause': SELECT `cities`.* FROM `cities` INNER JOIN `notes` ON `notes`.`city_id` = `cities`.`id` WHERE `cities`.`city_name` = 'Los Angeles'
+  Rendered cities/search.html.erb within layouts/application (41.5ms)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 31.1ms)
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'notes.city_id' in 'on clause': SELECT `cities`.* FROM `cities` INNER JOIN `notes` ON `notes`.`city_id` = `cities`.`id` WHERE `cities`.`city_name` = 'Los Angeles'):
+    40:   <div class="col-md-offset-2">
+    41:   <h3>Notes</h3>
+    42: 
+    43:     <% @notes.each do |note| %>
+    44: 
+    45:         <p><%= note.title %></p>
+    46:         <p><%= note.content %></p>
+  app/views/cities/search.html.erb:43:in `_app_views_cities_search_html_erb___2965223582371324791_70084376364900'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.9ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.0ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (42.8ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-03 13:39:05 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')
+  Rendered cities/search.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 3.0ms)
+
+ActionView::Template::Error (Association named 'cities' was not found on Note; perhaps you misspelled it?):
+    40:   <div class="col-md-offset-2">
+    41:   <h3>Notes</h3>
+    42: 
+    43:     <% @notes.each do |note| %>
+    44: 
+    45:         <p><%= note.title %></p>
+    46:         <p><%= note.content %></p>
+  app/views/cities/search.html.erb:43:in `_app_views_cities_search_html_erb___2965223582371324791_70084376364900'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.9ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.1ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-03 15:11:53 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')
+  Rendered cities/search.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (Association named 'cities' was not found on Note; perhaps you misspelled it?):
+    40:   <div class="col-md-offset-2">
+    41:   <h3>Notes</h3>
+    42: 
+    43:     <% @notes.each do |note| %>
+    44: 
+    45:         <p><%= note.title %></p>
+    46:         <p><%= note.content %></p>
+  app/views/cities/search.html.erb:43:in `_app_views_cities_search_html_erb___2965223582371324791_70084376364900'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (37.0ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-03 16:02:19 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')
+  Rendered cities/search.html.erb within layouts/application (20.8ms)
+Completed 500 Internal Server Error in 333ms (ActiveRecord: 203.4ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:   <div class="col-md-offset-2">
+    41:   <h3>Notes</h3>
+    42: 
+    43:     <% @notes.each do |note| %>
+    44: 
+    45:         <p><%= note.title %></p>
+    46:         <p><%= note.content %></p>
+  app/views/cities/search.html.erb:43:in `_app_views_cities_search_html_erb___2965223582371324791_70084376364900'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.9ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (45.2ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-03 20:11:49 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (12.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')
+  Rendered cities/search.html.erb within layouts/application (44.0ms)
+Completed 500 Internal Server Error in 722ms (ActiveRecord: 267.1ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:   <div class="col-md-offset-2">
+    41:   <h3>Notes</h3>
+    42: 
+    43:     <% @notes.each do |note| %>
+    44: 
+    45:         <p><%= note.title %></p>
+    46:         <p><%= note.content %></p>
+  app/views/cities/search.html.erb:43:in `_app_views_cities_search_html_erb___2965223582371324791_70084376364900'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (29.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.9ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (34.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (60.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-03 21:32:39 -0800
+Processing by FootprintsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered footprints/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 1878ms (Views: 1623.8ms | ActiveRecord: 179.6ms)
+
+
+Started GET "/assets/pic02-5b229f9ccdc1ec1c28e1e03475e7ca45cf9e77a452382ab2c58d9df76663d71f.jpg" for 127.0.0.1 at 2015-11-03 21:32:43 -0800
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2015-11-03 21:32:43 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-03 21:32:46 -0800
+Processing by FootprintsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered footprints/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 328ms (Views: 324.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/categories" for 127.0.0.1 at 2015-11-03 21:32:48 -0800
+Processing by UsersController#show_categories as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCategory Load (185.1ms)[0m  SELECT `categories`.* FROM `categories`
+  Rendered users/show_categories.html.erb within layouts/application (188.5ms)
+Completed 200 OK in 779ms (Views: 435.1ms | ActiveRecord: 186.0ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2015-11-03 21:32:59 -0800
+Processing by NotesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered notes/_form.html.erb (1197.4ms)
+  Rendered notes/new.html.erb within layouts/application (1204.2ms)
+Completed 200 OK in 1569ms (Views: 1541.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-11-03 21:33:03 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (94.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 326ms (Views: 207.8ms | ActiveRecord: 94.5ms)
+
+
+Started GET "/d/users/edit" for 127.0.0.1 at 2015-11-03 21:33:11 -0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered users/registrations/edit.html.erb within layouts/application (65.1ms)
+Completed 200 OK in 265ms (Views: 250.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-03 22:19:42 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (176.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.3ms)[0m  SELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')
+  Rendered cities/search.html.erb within layouts/application (1248.8ms)
+Completed 500 Internal Server Error in 3317ms (ActiveRecord: 533.7ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:   <div class="col-md-offset-2">
+    41:   <h3>Notes</h3>
+    42: 
+    43:     <% @notes.each do |note| %>
+    44: 
+    45:         <p><%= note.title %></p>
+    46:         <p><%= note.content %></p>
+  app/views/cities/search.html.erb:43:in `_app_views_cities_search_html_erb___2965223582371324791_70084376364900'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (314.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (79.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (266.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1630.9ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (32.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (127.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (16.0ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (332.8ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 00:41:56 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 1353ms (ActiveRecord: 578.9ms)
+
+NoMethodError (undefined method `notes' for nil:NilClass):
+  app/controllers/cities_controller.rb:24:in `search'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (125.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (57.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (37.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (389.9ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (9.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (28.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (18.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (146.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (37.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (15.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (388.6ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 00:43:02 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 500 Internal Server Error in 6068ms (ActiveRecord: 2.0ms)
+
+NoMethodError (undefined method `notes' for nil:NilClass):
+  app/controllers/cities_controller.rb:24:in `search'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (32.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (25.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (6.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (61.7ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 00:46:43 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (210.2ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  Rendered cities/search.html.erb within layouts/application (27.3ms)
+Completed 500 Internal Server Error in 1169ms (ActiveRecord: 241.4ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    25: <p>
+    26: <div class="col-md-offset-2">
+    27: 
+    28:   <% @cities.each do |city| %>
+    29: 
+    30:       <%= city.city_desc %>
+    31:   <% end %>
+  app/views/cities/search.html.erb:28:in `_app_views_cities_search_html_erb___2965223582371324791_70084395289100'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (66.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.0ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (152.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (14.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (21.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (141.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (11.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (233.8ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 00:48:23 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  [1m[36mNote Load (44.6ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1[0m
+Mysql2::Error: Unknown column 'notes.city_id' in 'where clause': SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 49.1ms)
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'notes.city_id' in 'where clause': SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1):
+  app/controllers/cities_controller.rb:28:in `puts'
+  app/controllers/cities_controller.rb:28:in `puts'
+  app/controllers/cities_controller.rb:28:in `search'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (25.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.9ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (12.0ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (12.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (67.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-04 00:49:30 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by FootprintsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered footprints/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 866ms (Views: 782.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 00:49:34 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  Rendered cities/search.html.erb within layouts/application (66.7ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 2.2ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    25: <p>
+    26: <div class="col-md-offset-2">
+    27: 
+    28:   <% @cities.each do |city| %>
+    29: 
+    30:       <%= city.city_desc %>
+    31:   <% end %>
+  app/views/cities/search.html.erb:28:in `_app_views_cities_search_html_erb___1628079650730389591_69820532374660'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (24.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (69.6ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 00:50:41 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  Rendered cities/search.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 4.7ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    25: <p>
+    26: <div class="col-md-offset-2">
+    27: 
+    28:   <% @cities.each do |city| %>
+    29: 
+    30:       <%= city.city_desc %>
+    31:   <% end %>
+  app/views/cities/search.html.erb:28:in `_app_views_cities_search_html_erb___1628079650730389591_69820532374660'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (36.6ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 00:51:26 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  [1m[36mNote Load (1.1ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1[0m
+Mysql2::Error: Unknown column 'notes.city_id' in 'where clause': SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 4.5ms)
+  [1m[35mNote Load (0.8ms)[0m  SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1
+Mysql2::Error: Unknown column 'notes.city_id' in 'where clause': SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1
+
+NoMethodError (undefined method `content' for #<Note::ActiveRecord_Associations_CollectionProxy:0x007f00b8b49398>):
+  app/controllers/cities_controller.rb:28:in `search'
+
+
+  [1m[36mNote Load (0.7ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1[0m
+Mysql2::Error: Unknown column 'notes.city_id' in 'where clause': SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.8ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 00:56:00 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1[0m
+  Rendered cities/search.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    25: <p>
+    26: <div class="col-md-offset-2">
+    27: 
+    28:   <% @cities.each do |city| %>
+    29: 
+    30:       <%= city.city_desc %>
+    31:   <% end %>
+  app/views/cities/search.html.erb:28:in `_app_views_cities_search_html_erb___1628079650730389591_69820532374660'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (36.0ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 00:56:22 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1[0m
+Mysql2::Error: Unknown column 'notes.city_id' in 'where clause': SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1
+  Rendered cities/search.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'notes.city_id' in 'where clause': SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1):
+    39: <div class="col-lg-14">
+    40:   <div class="col-md-offset-2">
+    41:   <h3>Notes</h3>
+    42:     <%= render :partial => @city.notes %>
+    43: 
+    44: </div>
+    45: </div>
+  app/views/cities/search.html.erb:42:in `_app_views_cities_search_html_erb___1628079650730389591_69820532374660'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (34.8ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 01:01:24 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')
+  [1m[36mNote Load (1.9ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1[0m
+Mysql2::Error: Unknown column 'notes.city_id' in 'where clause': SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1
+  Rendered cities/search.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.7ms)
+
+ActionView::Template::Error (undefined method `title' for #<Note::ActiveRecord_Associations_CollectionProxy:0x007f00bb992808>):
+    41:   <h3>Notes</h3>
+    42: 
+    43: 
+    44:         <p><%= @note.title %></p>
+    45:         <p><%= @note.content %></p>
+    46:     
+    47: 
+  app/views/cities/search.html.erb:44:in `_app_views_cities_search_html_erb___1628079650730389591_55911220'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.3ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 01:03:53 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1[0m
+Mysql2::Error: Unknown column 'notes.city_id' in 'where clause': SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1
+  Rendered cities/search.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 4.7ms)
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'notes.city_id' in 'where clause': SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1):
+    39: <div class="col-lg-14">
+    40:   <div class="col-md-offset-2">
+    41:   <h3>Notes</h3>
+    42:     <% @note.each do |note| %>
+    43: 
+    44:         <p><%= note.title %></p>
+    45:         <p><%= note.content %></p>
+  app/views/cities/search.html.erb:42:in `_app_views_cities_search_html_erb___1628079650730389591_69820502492980'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (21.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (42.1ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 01:12:10 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1[0m
+Completed 400 Bad Request in 32ms (ActiveRecord: 0.3ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: note):
+  app/controllers/cities_controller.rb:27:in `search'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (21.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (39.9ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 01:14:11 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1[0m
+Completed 400 Bad Request in 28ms (ActiveRecord: 0.3ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: city_name):
+  app/controllers/cities_controller.rb:27:in `search'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.1ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 01:14:49 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'city_id' for Note.):
+  app/controllers/cities_controller.rb:27:in `search'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.3ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 01:18:03 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')
+  [1m[36mNote Load (1.8ms)[0m  [1mSELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1[0m
+Mysql2::Error: Unknown column 'notes.city_id' in 'where clause': SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1
+  Rendered cities/search.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 2.3ms)
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'notes.city_id' in 'where clause': SELECT `notes`.* FROM `notes` WHERE `notes`.`city_id` = 1):
+    39: <div class="col-lg-14">
+    40:   <div class="col-md-offset-2">
+    41:   <h3>Notes</h3>
+    42:    <%= render :partial  => @notes%>
+    43: 
+    44:   </div>
+    45: </div>
+  app/views/cities/search.html.erb:42:in `_app_views_cities_search_html_erb___1628079650730389591_69820501469080'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (21.0ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (41.9ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 01:20:50 -0800
+
+SyntaxError (/home/ashish/cs219/infinity-1/config/routes.rb:7: syntax error, unexpected keyword_end
+/home/ashish/cs219/infinity-1/config/routes.rb:69: syntax error, unexpected end-of-input, expecting keyword_end):
+  config/routes.rb:7: syntax error, unexpected keyword_end
+  config/routes.rb:69: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.2ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (19.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (37.9ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 01:38:27 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 3.4ms)
+
+NameError (undefined local variable or method `city' for #<CitiesController:0x007f00b4c69dd0>):
+  app/controllers/cities_controller.rb:24:in `search'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (39.1ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 01:38:58 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/cities_controller.rb:24:in `search'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (40.1ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 12:09:21 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (2995.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  [1m[36mCity Load (4.2ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')[0m
+  Rendered cities/search.html.erb within layouts/application (989.3ms)
+Completed 500 Internal Server Error in 8966ms (ActiveRecord: 2999.5ms)
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    39: <div class="col-lg-14">
+    40:   <div class="col-md-offset-2">
+    41:   <h3>Notes</h3>
+    42:    <%= render :partial  => @notes%>
+    43: 
+    44:   </div>
+    45: </div>
+  app/views/cities/search.html.erb:42:in `_app_views_cities_search_html_erb___1628079650730389591_69820501469080'
+
+
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (256.8ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (121.3ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (71.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (703.1ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (96.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (6.5ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/ashish/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (198.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-04 17:29:35 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by FootprintsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered footprints/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 1165ms (Views: 1026.7ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 17:29:42 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')[0m
+  [1m[35mNote Load (100.5ms)[0m  SELECT `notes`.* FROM `notes` WHERE (city = 'Los Angeles')
+  Rendered cities/search.html.erb within layouts/application (115.4ms)
+Completed 200 OK in 521ms (Views: 292.7ms | ActiveRecord: 104.1ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 17:41:54 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')[0m
+  [1m[35mNote Load (0.2ms)[0m  SELECT `notes`.* FROM `notes` WHERE (city = 'Los Angeles')
+  Rendered cities/search.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 348ms (Views: 342.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 17:42:25 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')[0m
+  [1m[35mNote Load (0.1ms)[0m  SELECT `notes`.* FROM `notes` WHERE (city = 'Los Angeles')
+  Rendered cities/search.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 196ms (Views: 192.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 17:44:32 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')[0m
+  [1m[35mNote Load (0.1ms)[0m  SELECT `notes`.* FROM `notes` WHERE (city = 'Los Angeles')
+  Rendered cities/search.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 194ms (Views: 190.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 17:45:22 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')[0m
+  [1m[35mNote Load (0.1ms)[0m  SELECT `notes`.* FROM `notes` WHERE (city = 'Los Angeles')
+  Rendered cities/search.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 191ms (Views: 188.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 17:47:53 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.2ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')[0m
+  [1m[35mNote Load (0.1ms)[0m  SELECT `notes`.* FROM `notes` WHERE (city = 'Los Angeles')
+  Rendered cities/search.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 235ms (Views: 231.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cities/search?search=Los+Angeles" for 127.0.0.1 at 2015-11-04 17:52:55 -0800
+Processing by CitiesController#search as HTML
+  Parameters: {"search"=>"Los Angeles"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT  `cities`.* FROM `cities` WHERE `cities`.`city_name` = 'Los Angeles' LIMIT 1
+  [1m[36mCity Load (0.1ms)[0m  [1mSELECT `cities`.* FROM `cities` WHERE (city_name = 'Los Angeles')[0m
+  [1m[35mNote Load (0.3ms)[0m  SELECT `notes`.* FROM `notes` WHERE (city = 'Los Angeles')
+  Rendered cities/search.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 196ms (Views: 192.4ms | ActiveRecord: 0.7ms)

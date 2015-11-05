@@ -40,7 +40,20 @@
   <div class="col-md-offset-2">
   <h3>Notes</h3>
 
-</div>
+
+
+      <% @notes.each do |note| %>
+        <div class="col-md-4 column">
+            <div class="panel panel-info">
+                <div class="panel-heading"> <%= note.title %></div>
+                <div class="panel-body"> <%= note.content %></div>
+            </div>
+        </div>
+      <% end %>
+
+
+
+  </div>
 </div>
 
 </form>

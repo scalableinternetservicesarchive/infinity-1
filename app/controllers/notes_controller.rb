@@ -1,6 +1,11 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
+  def note_params
+    params.require(:note).permit(:title, :city, :content, :tags)
+  end
+
+
   # GET /notes
   # GET /notes.json
   def index
@@ -9,8 +14,6 @@ class NotesController < ApplicationController
 
   # GET /notes/1
   # GET /notes/1.json
-  def show
-  end
 
   # GET /notes/new
   def new
@@ -23,21 +26,24 @@ class NotesController < ApplicationController
 
   # POST /notes
   # POST /notes.json
-  def create
-    @note = Note.new(note_params)
 
-    respond_to do |format|
-      if @note.save
-        format.html { redirect_to @note, notice: 'Note was successfully created.' }
-        format.json { render :show, status: :created, location: @note }
-      else
-        format.html { render :new }
-        format.json { render json: @note.errors, status: :unprocessable_entity }
-      end
-    end
+  def create
+    #:comments_params
+    @city = City.find(params[:search])
+    #@comment = @post.comments.create!(params[:comment])
+    @note = @city.notes.create!(params.require(:note).permit!) # .comments.create!(params.require(:comment).permit!)
+    redirect_to @city
   end
 
-  # PATCH/PUT /notes/1
+
+  def create
+    #:comments_params
+
+  end
+
+
+
+      # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
   def update
     respond_to do |format|
@@ -68,7 +74,4 @@ class NotesController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def note_params
-      params.require(:note).permit(:title, :city, :content, :tags)
-    end
 end

@@ -22,9 +22,9 @@ class CategoriesController < ApplicationController
   end
 
   def edit_categories
-    @user =  current_user
+    #@user =  current_user
     @allcategories = Category.all
-    @user_categories = @user.categories
+    #@user_categories = @user.categories
   end
 
   def submit_categories

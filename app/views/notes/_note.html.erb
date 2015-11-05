@@ -1,9 +1,16 @@
 <div>
-  <h2><%= link_to note.title, note %></h2>
-  <p><%= note.content %></p>
-  <p><small>
-    <%= note.created_at.to_s %>
-  </small></p>
+
+  <br>
+  <br><br>
+
+  <p>
+  <div class="col-md-7 column">
+    <div class="panel panel-primary">
+      <div class="panel-heading"> <%= note.title  %></div>
+      <div class="panel-body"> <%= note.content %></div>
+    </div>
+  </div>
+  </p>
   <%= link_to 'Show', note %>
   <%= link_to 'Edit', edit_note_path(note) %>
   <%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %>

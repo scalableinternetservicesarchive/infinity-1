@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104222457) do
+ActiveRecord::Schema.define(version: 20151030185537) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -27,14 +27,13 @@ ActiveRecord::Schema.define(version: 20151104222457) do
   add_index "categories_users", ["category_id", "user_id"], name: "index_categories_users_on_category_id_and_user_id"
   add_index "categories_users", ["user_id", "category_id"], name: "index_categories_users_on_user_id_and_category_id"
 
-  create_table "comments", force: :cascade do |t|
-    t.integer  "note_id"
-    t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "cities", force: :cascade do |t|
+    t.string   "city_name",  limit: 255
+    t.string   "city_desc",  limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
-  add_index "comments", ["note_id"], name: "index_comments_on_note_id"
 
   create_table "footprints", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -42,14 +41,14 @@ ActiveRecord::Schema.define(version: 20151104222457) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.string   "city"
-    t.string   "title"
-    t.integer  "uid"
-    t.text     "content"
-    t.string   "tags"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
+    t.string   "city_name",  limit: 255
+    t.string   "title",      limit: 255
+    t.integer  "uid",        limit: 4
+    t.text     "content",    limit: 65535
+    t.string   "tags",       limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "user_id",    limit: 4
   end
 
   create_table "users", force: :cascade do |t|

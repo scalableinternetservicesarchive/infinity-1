@@ -1,7 +1,7 @@
 class CreateNotes < ActiveRecord::Migration
   def change
     create_table :notes do |t|
-      t.string :city
+      t.string :city_name
       t.string :title
       t.integer :uid
       t.text :content

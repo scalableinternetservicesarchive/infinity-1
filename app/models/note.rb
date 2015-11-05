@@ -1,5 +1,6 @@
 class Note < ActiveRecord::Base
   belongs_to :user
+  has_many :comments
   belongs_to :city
 
   # search method on note object which will return all notes of a city

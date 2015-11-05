@@ -21,6 +21,23 @@ class CategoriesController < ApplicationController
   def edit
   end
 
+  def edit_categories
+    #@user =  current_user
+    @allcategories = Category.all
+    #@user_categories = @user.categories
+  end
+
+  def submit_categories
+    @user =  current_user
+    @user.categories.clear
+    @interests = params[:cat]
+    @interests.each  do |i|
+      @c = Category.find_by_name(i)
+      @user.categories << @c
+    end
+  end
+
+
   # POST /categories
   # POST /categories.json
   def create
@@ -71,4 +88,5 @@ class CategoriesController < ApplicationController
     def category_params
       params.require(:category).permit(:name)
     end
+
 end

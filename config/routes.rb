@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/categories/edit_categories', to: 'categories#edit_categories'
+  get '/categories/submit_categories', to: 'categories#submit_categories'
 
   get '/cities/search', to:  'cities#search'
 
@@ -17,8 +19,7 @@ Rails.application.routes.draw do
   devise_for :users, :path_prefix => 'd'
   get '/users/categories', to: 'users#show_categories'
   resources :users, :only => [:show]
- # resources :notes
-
+  resources :notes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,19 +1,18 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
-  def note_params
-    params.require(:note).permit(:title, :city_name, :content, :tags)
-  end
-
-
   # GET /notes
   # GET /notes.json
   def index
+    :notes_params
     @notes = Note.all
+    @user =  current_user
   end
 
   # GET /notes/1
   # GET /notes/1.json
+  def show
+  end
 
   # GET /notes/new
   def new
@@ -26,19 +25,6 @@ class NotesController < ApplicationController
 
   # POST /notes
   # POST /notes.json
-
-
-
-  #def create
-    #:comments_params
-  #  @city = City.find(params[:search])
-    #@comment = @post.comments.create!(params[:comment])
-   # @note = @city.notes.create!(params.require(:note).permit!) # .comments.create!(params.require(:comment).permit!)
-   # redirect_to @city
-  #end
-
-
-
   def create
     @note = Note.new(note_params)
 
@@ -53,8 +39,7 @@ class NotesController < ApplicationController
     end
   end
 
-
-      # PATCH/PUT /notes/1
+  # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
   def update
     respond_to do |format|
@@ -85,4 +70,7 @@ class NotesController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    def note_params
+      params.require(:note).permit(:title, :city, :content, :tags)
+    end
 end

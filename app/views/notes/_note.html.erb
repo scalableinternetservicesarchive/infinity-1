@@ -1,0 +1,10 @@
+<div>
+  <h2><%= link_to note.title, note %></h2>
+  <p><%= note.content %></p>
+  <p><small>
+    <%= note.created_at.to_s %>
+  </small></p>
+  <%= link_to 'Show', note %>
+  <%= link_to 'Edit', edit_note_path(note) %>
+  <%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

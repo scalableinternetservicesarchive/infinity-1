@@ -8,7 +8,6 @@ class UsersController < ApplicationController
   def show_categories
     @user =  current_user
     @allcategories = Category.all
-    @foo = 'bar'
   end
 
   private
@@ -16,7 +15,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:content, :picture)
   end
-
-
 
 end

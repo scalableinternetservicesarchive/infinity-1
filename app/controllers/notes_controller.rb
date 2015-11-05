@@ -2,7 +2,7 @@ class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
   def note_params
-    params.require(:note).permit(:title, :city, :content, :tags)
+    params.require(:note).permit(:title, :city_name, :content, :tags)
   end
 
 
@@ -27,20 +27,31 @@ class NotesController < ApplicationController
   # POST /notes
   # POST /notes.json
 
-  def create
+
+
+  #def create
     #:comments_params
-    @city = City.find(params[:search])
+  #  @city = City.find(params[:search])
     #@comment = @post.comments.create!(params[:comment])
-    @note = @city.notes.create!(params.require(:note).permit!) # .comments.create!(params.require(:comment).permit!)
-    redirect_to @city
-  end
+   # @note = @city.notes.create!(params.require(:note).permit!) # .comments.create!(params.require(:comment).permit!)
+   # redirect_to @city
+  #end
+
 
 
   def create
-    #:comments_params
+    @note = Note.new(note_params)
 
+    respond_to do |format|
+      if @note.save
+        format.html { redirect_to @note, notice: 'Note was successfully created.' }
+        format.json { render :show, status: :created, location: @note }
+      else
+        format.html { render :new }
+        format.json { render json: @note.errors, status: :unprocessable_entity }
+      end
+    end
   end
-
 
 
       # PATCH/PUT /notes/1

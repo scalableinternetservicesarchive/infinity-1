@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20151030214530) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.string   "city",       limit: 255
+    t.string   "city_name",  limit: 255
     t.string   "title",      limit: 255
     t.integer  "uid",        limit: 4
     t.text     "content",    limit: 65535

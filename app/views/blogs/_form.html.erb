@@ -11,24 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    Name of your blog :
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    Describe your blog in few words :
-    <%= f.text_area :body %>
-  </div>
-  <div class="field">
-     Link it :
-      <%= f.text_field :link %>
-  </div>
-  <div class="field">
-    What city does your blog capture? :
-      <%= f.text_field :city_name %>
-  </div>
-  <div> <b>Upload Profile Picture:</b> <%= f.file_field :picture %> </div><br/>
+    <div class="form-group">
+      <table class="table table-striped">
+        <tr><td><%= label_tag(:title, "Name of your blog") %></td>
+          <td><%= f.text_field :title,placeholder: "Enter title" %></td></tr>
+        <tr><td><%= label_tag(:body, "Describe in few words") %></td>
+          <td><%= f.text_area :title,placeholder: "Say a few words" %></td></tr>
+        <tr><td><%= label_tag(:link, "Link it") %></td>
+          <td><%= f.text_field :title,placeholder: "https://myAwesomeBlog.com" %></td></tr>
+        <tr><td><%= label_tag(:city, "City it captures") %></td>
+          <td><%= f.text_field :title,placeholder: "Enter city name" %></td></tr>
+        <tr><td><%= label_tag(:picture, "Upload your adventure") %></td>
+          <td><%= f.file_field :picture %> </td></tr>
+      </table>
+    </div>
     <div class="actions">
-    <%= f.submit %>
-  </div>
+      <%= f.submit  class: 'btn btn-info'%>
+    </div>
 <% end %>

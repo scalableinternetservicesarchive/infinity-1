@@ -31,8 +31,19 @@
     </nav>
   </div>
 </header>
-<div>
-  <%= yield %>
+<div id="wrapper">
+<%= render :partial => 'footprints/sidepanel' %>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
 </body>
 </html>

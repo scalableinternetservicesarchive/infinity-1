@@ -1,41 +1,6 @@
-<div id="wrapper">
-
-  <!-- Sidebar -->
-  <div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-        <a href="#">
-          Hi <%= @user.first_name %>
-        </a>
-      </li>
-      <li>
-        <%= link_to "News Feed", footprint_path %>
-      </li>
-      <li>
-        <%= link_to "Show All Blogs", blogs_path %>
-      </li>
-      <li>
-        <%= link_to "Link My blog", new_blog_path %>
-      </li>
-      <li>
-        <%= link_to "New Notes", new_note_path %>
-      </li>
-      <li>
-        <%= link_to "Show All Notes", notes_path %>
-      </li>
-      <li>
-      <%= link_to 'Check my profile', current_user %>
-      </li><li>
-      <%= link_to "Edit Profile", edit_user_registration_path %>
-    </li>
-    </ul>
-  </div>
-  <!-- /#sidebar-wrapper -->
-
 <%= render :partial => 'cities/city' %>
 
 
     <%= render :partial => @notes_feed %>
 
-</div>
 </div>

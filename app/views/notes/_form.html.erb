@@ -22,7 +22,7 @@
         <td><%= f.text_area :content ,placeholder: "Enter Note"%></td></tr>
 
       <tr><td><%= label_tag(:tags, "TAGS") %></td>
-      <td><%= f.collection_select :categories,Category.all,:name,:name,{}, {include_blank: true,:multiple => true} %></td></tr>
+      <td><%= f.collection_select :tags,Category.all,:name,:name,{}, {include_blank: true,:multiple => true} %></td></tr>
     </table>
   </div>
   <div class="actions">

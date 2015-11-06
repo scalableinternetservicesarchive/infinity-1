@@ -4,6 +4,10 @@ Rails.application.routes.draw do
     resources :blog_comments, :only => [:create]
   end
 
+  resources :users do
+    resources :blog_comments, :only => [:create]
+  end
+
   get '/categories/edit_categories', to: 'categories#edit_categories'
   get '/categories/submit_categories', to: 'categories#submit_categories'
 

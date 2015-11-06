@@ -31,8 +31,13 @@
     </nav>
   </div>
 </header>
+
+
 <div id="wrapper">
+
+  <% if user_signed_in?%>
 <%= render :partial => 'footprints/sidepanel' %>
+  <%end%>
 
   <div class="container-fluid">
     <div class="row">
@@ -42,7 +47,6 @@
     </div>
   </div>
 </div>
-
 
 
 </body>

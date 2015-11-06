@@ -19,10 +19,10 @@
         <td><%= f.text_field :city_name,placeholder: "Enter city" %></td></tr>
 
         <tr><td><%= label_tag(:content, "NOTE") %></td>
-        <td><%= f.text_area :content ,cols:60,rows:5,placeholder: "Enter Note"%></td></tr>
+        <td><%= f.text_area :content ,placeholder: "Enter Note"%></td></tr>
 
       <tr><td><%= label_tag(:tags, "TAGS") %></td>
-      <td><%= f.collection_select :categories,Category.all,:name,:name,{}, {include_blank: true,:multiple => true} %></td></tr>
+      <td><%= f.collection_select :tags,Category.all,:name,:name,{}, {include_blank: true,:multiple => true} %></td></tr>
     </table>
   </div>
   <div class="actions">

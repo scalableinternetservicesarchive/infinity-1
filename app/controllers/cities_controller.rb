@@ -9,9 +9,9 @@ class CitiesController < ApplicationController
 
 
   def search
-  set_city
+  #:set_city
 #    @cities = City.all
- # puts(params[:search])
+ # pts(params[:search])
     if params[:search]
       @cities = City.where("city_name = ?",params[:search])
 

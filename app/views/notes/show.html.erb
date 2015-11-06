@@ -15,9 +15,13 @@
 
 
 <%= form_for [@note, Comment.new] do |f| %>
-    <p>
-      <%= f.label :body, "New comment" %><br/>
-      <%= f.text_area :body %>
-    </p>
-    <p><%= f.submit "Add comment" %></p>
+
+      <h5><%= f.label :body, "Add New Comment" %></h5>
+
+      <%= image_tag @user.picture_url.to_s , :class => "img-thumbnail" , :style => "width:50px"  if @user.picture? %>
+      <b><%= @user.first_name %> <%= @user.last_name %></b>
+      <br/><br/><%= f.text_area :body%>
+      <br/><%= f.submit "Add"%>
+
+
 <% end %>

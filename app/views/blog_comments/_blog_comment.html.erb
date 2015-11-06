@@ -1,0 +1,9 @@
+<%= div_for blog_comment do %>
+    <p>
+      <strong>
+        Posted <%= time_ago_in_words(blog_comment.created_at) %> ago
+      </strong>
+      <br/>
+      <%= blog_comment.body %>
+    </p>
+<% end %>

@@ -7,7 +7,7 @@
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
         <a href="#">
-          Hi <%@user.first_name%>
+          Hi <%current_user.first_name%>
         </a>
       </li>
       <li>
@@ -26,8 +26,6 @@
     <div class="container-fluid">
       <%= render :partial => 'cities/city' %>
       </div>
-    <%= image_tag @user.picture_url.to_s , :class => "img-thumbnail" , :style => "width:200px"  if @user.picture? %>
-
     <%= render :partial => @notes %>
     <br>
   </div>

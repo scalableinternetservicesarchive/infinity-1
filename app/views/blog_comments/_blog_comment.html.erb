@@ -1,9 +1,25 @@
+<div class="detailBox">
+  <div class="actionBox">
+
 <%= div_for blog_comment do %>
     <p>
       <strong>
-        Posted <%= time_ago_in_words(blog_comment.created_at) %> ago
+        <span class="date sub-text">Posted <%= time_ago_in_words(blog_comment.created_at) %> ago </span>
       </strong>
       <br/>
+
+
+<div class="commenterImage" style="width:50px">
+      <%= image_tag blog_comment.user.picture_url.to_s , :class => "img-thumbnail" ,
+                    :style => "width:100px;height:50px;"   unless (defined?( blog_comment.user.picture)).nil? %>
+</div>
+      <i><%= blog_comment.user.first_name unless (defined?( blog_comment.user.first_name)).nil? %>
+      <%= blog_comment.user.last_name unless (defined?( blog_comment.user.last_name)).nil? %></i>
+
+        <div class="commentText">
       <%= blog_comment.body %>
+    </div>
     </p>
 <% end %>
+  </div>
+</div>

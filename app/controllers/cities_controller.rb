@@ -9,6 +9,9 @@ class CitiesController < ApplicationController
 
 
   def search
+    String query = params[:search]
+    query = "%"+query+"%"
+    puts(query)
   #:set_city
 #    @cities = City.all
  # pts(params[:search])
@@ -17,23 +20,23 @@ class CitiesController < ApplicationController
 
       @notes = Note.where("city_name = ?", params[:search])
     end
-    #render "footprints/index"
+
+    # search categories table if city is note entered
+
+    if @cities.empty?
+      @category = Category.where("name = ?",params[:search])
+
+      puts(@category.name)
+      if @category != nil
+
+        @notes = Note.where("content like ? ",query)
+
+      end
+    end
 
     #@notes = Note.where(:city_name => params[:search]).joins(:cities)
-
-
-    # right way  @note = @city.notes
-    #@notes = City.joins(:notes).where(@city)
-    # @note = City.joins(:notes)
-    #puts(@city.city_name)
-
-    #@city = @city.notes
-
-#    @note = @city.notes.create!(params.require(:city_name).permit!) # .comments.create!(params.require(:comment).permit!)
-
-   # puts(@note.content)
-
   end
+
 
   # GET /cities/1
   # GET /cities/1.json

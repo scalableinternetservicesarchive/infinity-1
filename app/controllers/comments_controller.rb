@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:comment, :post, :body, :post_comments_path)
   end
 
+
   def create
     #:comments_params
     @note = Note.find(params[:note_id])

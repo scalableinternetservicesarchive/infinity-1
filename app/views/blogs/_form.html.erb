@@ -23,6 +23,8 @@
           <td><%= f.text_field :city_name,placeholder: "Enter city name" %></td></tr>
         <tr><td><%= label_tag(:picture, "Upload your adventure") %></td>
           <td><%= f.file_field :picture %> </td></tr>
+        <tr><td><%= label_tag(:author, "My blogger name") %></td>
+          <td><%= f.text_field :author,placeholder: "The awesome travel blogger" %> </td></tr>
       </table>
     </div>
     <div class="actions">

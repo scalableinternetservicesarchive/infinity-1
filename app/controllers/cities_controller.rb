@@ -21,19 +21,11 @@ class CitiesController < ApplicationController
       @notes = Note.where("city_name = ?", params[:search])
     end
     #render "footprints/index"
-     if @cities.empty?
-      @category = Category.where("name = ?",params[:search])
 
-      puts(@category.name)
-      if @category != nil
-
-        @notes = Note.where("content like ? ",query)
-
-      end
 
     # search categories table if city is note entered
 
-    end
+
 
     #@notes = Note.where(:city_name => params[:search]).joins(:cities)
   end

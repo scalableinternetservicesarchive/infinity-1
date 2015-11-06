@@ -8,4 +8,8 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :categories
   mount_uploader :picture, PictureUploader
 
+  def quote?
+    # code here
+  end
+
 end

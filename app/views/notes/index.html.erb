@@ -1,26 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<div id="wrapper">
-
-  <!-- Sidebar -->
-  <div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-        <a href="#">
-          Hi <%current_user.first_name%>
-        </a>
-      </li>
-      <li>
-        <%= link_to "News Feed", footprint_path %>
-      </li>
-      <li>
-        <%= link_to "Add new Notes", new_note_path %>
-      </li>
-
-    </ul>
-  </div>
-  <!-- /#sidebar-wrapper -->
-
   <!-- Page Content -->
   <div id="page-content-wrapper">
     <div class="container-fluid">
@@ -29,4 +8,3 @@
     <%= render :partial => @notes %>
     <br>
   </div>
-</div>

@@ -1,3 +1,5 @@
-<tr><td><%=image_tag(category.name+".jpg",:class => "img-thumbnail", height: '300', width: '300') %></td></tr>
-<tr><td><%= check_box_tag 'cat[]',category.name, (current_user.categories.include? category) %></td>
-<td><%= category.name %></td></tr><br/>
+<tr class="info"><td colspan="3"><%=image_tag(category.name+".jpg",:class => "img-thumbnail", height: '300', width: '600') %></td></tr>
+
+<tr class="success"><td class="text-center",><big><%= category.name %></big></td>
+<td class="text-center"><%= check_box_tag 'cat[]',category.name, (current_user.categories.include? category) %>
+</td></tr>

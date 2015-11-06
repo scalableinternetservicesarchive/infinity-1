@@ -2,12 +2,13 @@
 
 <%= render :partial => 'footprints/user_sidepanel' %>
 
-
-<h1> Please edit your Interests, <%= current_user.first_name %></h1>
+<div class="page-header">
+<h1>Please edit your Interests, <%= current_user.first_name %></h1>
+</div>
 
   <%=form_tag({controller: "categories", action: "submit_categories"}, method: "get" ) do %>
   <%= render :partial => @allcategories %>
 
 <br/>
-    <div><%= submit_tag 'Save' %></div>
+    <div><%= submit_tag 'Save', class:"btn btn-primary center-block" %></div>
 <%end%>

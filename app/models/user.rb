@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :notes
   has_many :blogs
+  has_many :blog_comments
   has_and_belongs_to_many :categories
   mount_uploader :picture, PictureUploader
   #validates_presence_of :first_name, :last_name, :email , :is_female

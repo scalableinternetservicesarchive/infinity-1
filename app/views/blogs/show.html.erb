@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <%= render :partial => @blog %>
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
 
+<% if false %>
+<%= link_to 'Edit', edit_blog_path(@blog) %>
+<%= link_to 'Back', blogs_path %>
+<% end %>
 <h2>Comments</h2>
 <div id="comments">
   <%= render :partial => @blog.blog_comments %>
@@ -11,7 +13,7 @@
 
 <%= form_for [@blog, BlogComment.new] do |f| %>
     <h5><%= f.label :body, "Add New Comment" %></h5>
-    <%= image_tag @user.picture_url.to_s , :class => "img-thumbnail" , :style => "width:50px"  if @user.picture? %>
+    <%= image_tag @user.picture_url.to_s , :class => "img-thumbnail" , :style => "width:50px;height:50px;"  if @user.picture? %>
     <b><%= @user.first_name %> <%= @user.last_name %></b>
     <br/><br/><%= f.text_area :body%>
     <br/><%= f.submit "Add"%>

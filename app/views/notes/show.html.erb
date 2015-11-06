@@ -2,11 +2,11 @@
 <%= render :partial =>@note %>
 
 
-  <button type="submit" formaction=edit_note_path(@note) class="btn btn-primary">Edit</button>
-
+<!--  <button type="submit" formaction=edit_note_path(@note) class="btn btn-primary">Edit</button> -->
+<!--
 <%= link_to 'Edit', edit_note_path(@note) %> |
 <%= link_to 'Back', notes_path %>
-
+-->
 <h2>Comments</h2>
 <div id="comments">
   <%= render :partial => @note.comments %>

@@ -1,32 +1,7 @@
-<div id="wrapper">
+<p id="notice"><%= notice %>
 
-  <!-- Sidebar -->
-  <div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-        <a href="#">
-          <%= current_user.first_name %>
-        </a>
-      </li>
-      <li>
-        My Notes
-      </li>
-      <li>
-        <%= link_to "Add Notes", new_note_path %>
-      </li>
-      <li>
-        <%= link_to "Edit interests", "/categories/edit_categories" %>
-      </li>
-      <li>
-        <%= link_to "Edit Profile", edit_user_registration_path %>
-      </li>
-      <li>
-        <%= link_to "Back", :back %>
-      </li>
-    </ul>
-  </div>
-  <!-- /#sidebar-wrapper -->
-<p id="notice"><%= notice %></p>
+<%= render :partial => 'footprints/user_sidepanel' %>
+
 
 <h1> Please edit your Interests, <%= current_user.first_name %></h1>
 
@@ -36,4 +11,3 @@
 <br/>
     <div><%= submit_tag 'Save' %></div>
 <%end%>
-</div>

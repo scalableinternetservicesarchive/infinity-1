@@ -1,33 +1,5 @@
-<div id="wrapper">
-
-  <!-- Sidebar -->
-  <div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-        <a href="#">
-          Hi <%= @user.first_name %>
-        </a>
-      </li>
-      <li>
-       My Notes
-      </li>
-      <li>
-        <%= link_to "Add Notes", new_note_path %>
-      </li>
-      <li>
-        <%= link_to "Edit interests", "/categories/edit_categories" %>
-      </li>
-     <li>
-      <%= link_to "Edit Profile", edit_user_registration_path %>
-    </li>
-      <li>
-        <%= link_to "Back", :back %>
-      </li>
-    </ul>
-  </div>
-  <!-- /#sidebar-wrapper -->
-
-  <!-- Page Content -->
+<%= render :partial => 'footprints/user_sidepanel' %>
+<!-- Page Content -->
   <div id="page-content-wrapper">
     <div class="container-fluid">
       <div class="row" style="background: #c0dfd9">
@@ -58,7 +30,6 @@
 </div>
 <!-- /#page-content-wrapper -->
 
-</div>
 
 
 

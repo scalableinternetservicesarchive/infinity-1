@@ -29,7 +29,7 @@ class NotesController < ApplicationController
   # POST /notes.json
   def create
     @note = Note.new(city_name:note_params[:city_name],title:note_params[:title],content:note_params[:content])
-    note_categories = note_params[:tags]
+    note_categories = note_params[:categories]
     note_categories.delete("")
     note_categories.each  do |i|
       c = Category.find_by_name(i)
@@ -79,6 +79,6 @@ class NotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:title, :city_name, :content, tags: [])
+      params.require(:note).permit(:title, :city_name, :content, categories: [])
     end
 end

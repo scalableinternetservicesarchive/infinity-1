@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :blogs
   has_and_belongs_to_many :categories
   mount_uploader :picture, PictureUploader
-  validates_presence_of :first_name, :last_name, :email , :is_female
+  #validates_presence_of :first_name, :last_name, :email , :is_female
 
   def quote?
     # code here

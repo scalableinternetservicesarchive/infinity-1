@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
+
+<div class="col-md-offset-2">
+  <div class="col-md-20 column">
+
 <%= render :partial =>@note %>
 
 
@@ -7,12 +11,21 @@
 <%= link_to 'Edit', edit_note_path(@note) %> |
 <%= link_to 'Back', notes_path %>
 -->
-<h2>Comments</h2>
+
+  </div>
+</div>
+<br><br><br>
+
+    <div class="col-md-offset-2"><p>Comments
 <div id="comments">
   <%= render :partial => @note.comments %>
+
+</div>
+      </p>
 </div>
 
-
+<div class="col-md-offset-2">
+  <div class="col-md-15 column">
 <%= form_for [@note, Comment.new] do |f| %>
 
       <h5><%= f.label :body, "Add New Comment" %></h5>
@@ -24,3 +37,6 @@
 
 
 <% end %>
+      </div></div>
+
+

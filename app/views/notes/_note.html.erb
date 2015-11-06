@@ -1,21 +1,26 @@
-  <br>
+<br xmlns="http://www.w3.org/1999/html">
   <br><br>
 
-  <p>
-  <div class="col-md-7 column">
+
+  <div class="col-md-offset-2">
+  <div class="col-md-5 column">
     <div class="panel panel-primary">
-      <div class="panel-heading"> <%= note.title  %></div>
+      <div class="panel-heading"> <%= link_to  note.title, note   %></div>
       <div class="panel-body"> <%= note.content %></div>
     </div>
   </div>
-  </p>
+  </div>
+
 
   <br><br><br><br><br><br><br>
 
 
   <!-- <button type="submit" formaction=edit_note_path(@note) class="btn btn-primary">Edit</button> -->
-
+<div class="col-md-offset-2">
+  <div class="col-md-5 column">
 
   <%= link_to 'Edit', edit_note_path(note) %> |
   <%= link_to 'Back', notes_path %>
   <%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+    </div>

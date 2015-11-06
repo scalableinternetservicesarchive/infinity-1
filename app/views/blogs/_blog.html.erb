@@ -1,2 +1,13 @@
 <h2><%= link_to_unless_current blog.title, @blog %></h2>
+<%= image_tag blog.picture_url.to_s , :class => "img-thumbnail" , :style => "width:200px"  if blog.picture? %>
+<br/>
 <%= simple_format blog.body %>
+
+<br/>
+<b><%= link_to 'Check out my blog',blog.link %></b>
+<br/>
+Footprinted by : <<%= blog.author %> , <%= blog.city_name %>
+
+
+
+

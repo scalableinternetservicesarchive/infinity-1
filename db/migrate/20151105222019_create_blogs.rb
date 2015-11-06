@@ -6,6 +6,7 @@ class CreateBlogs < ActiveRecord::Migration
       t.string :city_name
       t.string :author
       t.string :link
+      t.string :picture
       t.timestamps null: false
     end
   end

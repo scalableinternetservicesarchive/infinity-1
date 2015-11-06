@@ -1,4 +1,4 @@
-<%= form_for(@note) do |f| %>
+<%= form_for(@note, :html => {:class => 'form-horizontal'}) do |f|  %>
   <% if @note.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@note.errors.count, "error") %> prohibited this note from being saved:</h2>
@@ -11,19 +11,21 @@
     </div>
   <% end %>
   <div class="form-group">
-    <%= label_tag(:title, "TITLE") %>
-    <%= f.text_field :title %><br/>
-    <%= label_tag(:city_name, "CITY") %>
+    <table class="table table-striped">
+        <tr><td><%= label_tag(:title, "TITLE") %></td>
+        <td><%= f.text_field :title,placeholder: "Enter title" %></td></tr>
 
-    <%= f.text_field :city_name %><br/>
-    <%= label_tag(:content, "NOTE") %>
+        <tr><td><%= label_tag(:city_name, "CITY") %></td>
+        <td><%= f.text_field :city_name,placeholder: "Enter city" %></td></tr>
 
-    <%= f.text_area :content%><br/>
-    <%= label_tag(:tags, "TAGS") %>
+        <tr><td><%= label_tag(:content, "NOTE") %></td>
+        <td><%= f.text_area :content ,cols:60,rows:5,placeholder: "Enter Note"%></td></tr>
 
-    <%= f.text_field :tags %><br/>
+        <tr><td><%= label_tag(:tags, "TAGS") %></td>
+        <td><%= f.text_field :tags %></td></tr>
+    </table>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit  class: 'btn btn-info'%>
   </div>
 <% end %>

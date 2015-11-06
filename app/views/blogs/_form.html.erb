@@ -11,15 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="form-group">
+      <table class="table table-striped">
+        <tr><td><%= label_tag(:title, "Name of your blog") %></td>
+          <td><%= f.text_field :title,placeholder: "Enter title" %></td></tr>
+        <tr><td><%= label_tag(:body, "Describe in few words") %></td>
+          <td><%= f.text_area :title,placeholder: "Say a few words" %></td></tr>
+        <tr><td><%= label_tag(:link, "Link it") %></td>
+          <td><%= f.text_field :title,placeholder: "https://myAwesomeBlog.com" %></td></tr>
+        <tr><td><%= label_tag(:city, "City it captures") %></td>
+          <td><%= f.text_field :title,placeholder: "Enter city name" %></td></tr>
+        <tr><td><%= label_tag(:picture, "Upload your adventure") %></td>
+          <td><%= f.file_field :picture %> </td></tr>
+      </table>
+    </div>
+    <div class="actions">
+      <%= f.submit  class: 'btn btn-info'%>
+    </div>
 <% end %>

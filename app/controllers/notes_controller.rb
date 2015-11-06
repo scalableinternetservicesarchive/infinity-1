@@ -18,6 +18,7 @@ class NotesController < ApplicationController
   # GET /notes/new
   def new
     @note = Note.new
+    @tags = Category.all
   end
 
   # GET /notes/1/edit

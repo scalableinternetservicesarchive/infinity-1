@@ -12,14 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    Name of your blog :
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :body %><br>
+    Describe your blog in few words :
     <%= f.text_area :body %>
   </div>
-  <div class="actions">
+  <div class="field">
+     Link it :
+      <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    What city does your blog capture? :
+      <%= f.text_field :city_name %>
+  </div>
+  <div> <b>Upload Profile Picture:</b> <%= f.file_field :picture %> </div><br/>
+    <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>

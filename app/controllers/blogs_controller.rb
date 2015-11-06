@@ -10,6 +10,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @user = current_user
   end
 
   # GET /blogs/new
@@ -69,6 +70,6 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body,:city_name,:link, :author)
+      params.require(:blog).permit(:title, :body,:city_name,:link, :author, :picture)
     end
 end

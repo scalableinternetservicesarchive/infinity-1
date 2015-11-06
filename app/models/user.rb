@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :notes
+  has_many :blogs
   has_and_belongs_to_many :categories
   mount_uploader :picture, PictureUploader
   validates_presence_of :first_name, :last_name, :email , :is_female

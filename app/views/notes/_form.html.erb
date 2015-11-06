@@ -21,8 +21,8 @@
         <tr><td><%= label_tag(:content, "NOTE") %></td>
         <td><%= f.text_area :content ,cols:60,rows:5,placeholder: "Enter Note"%></td></tr>
 
-        <tr><td><%= label_tag(:tags, "TAGS") %></td>
-        <td><%= f.text_field :tags %></td></tr>
+      <tr><td><%= label_tag(:tags, "TAGS") %></td>
+      <td><%= f.collection_select :categories,Category.all,:name,:name,{}, {include_blank: true,:multiple => true} %></td></tr>
     </table>
   </div>
   <div class="actions">

@@ -44,6 +44,17 @@ City.create(city_name:'Paris', city_desc:'Paris, France’s capital, is a major 
 @note6.categories << Category.find_by_name('Delicious food')
 @note6.save
 
+for i in 1...5000
+  Category.create(name: 'Beaches'+i)
+  City.create(city_name: 'LA'+i, city_desc: 'Los Angeles is a sprawling Southern California city famed as the center of the nation’s film and television industry.')
+  Note.create(city_name:'Paris'+i,title:'Ratatouille',content:'Italian food is so good!')
+  Blog.create(city_name: 'Los Angeles'+i, title:'Long Weekend @ LA',body: 'The United States’ second biggest city has got it all. Beaches, boulevards, baseball and Beverly hills.',
+              link: 'http://www.urbantravelblog.com/guide/los-angeles/', picture: File.open(File.join(Rails.root, '/app/assets/images/LosAngelesBlog1.jpg')), author: 'Vince Robbins');
+
+end
+
+
+
 
 Blog.create(city_name: 'Los Angeles', title:'Long Weekend @ LA',body: 'The United States’ second biggest city has got it all. Beaches, boulevards, baseball and Beverly hills.',
             link: 'http://www.urbantravelblog.com/guide/los-angeles/', picture: File.open(File.join(Rails.root, '/app/assets/images/LosAngelesBlog1.jpg')), author: 'Vince Robbins');

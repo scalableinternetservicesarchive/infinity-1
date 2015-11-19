@@ -23,7 +23,7 @@ class CategoriesController < ApplicationController
 
   def edit_categories
     #@user =  current_user
-    @allcategories = Category.all
+    @allcategories = Category.all if stale?(current_user.categories) or stale?(Category.all)
     #@user_categories = @user.categories
   end
 

@@ -18,6 +18,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/new
   def new
+    expires_in(864000.seconds, public: true)
     @blog = Blog.new
   end
 

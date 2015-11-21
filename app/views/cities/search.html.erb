@@ -4,37 +4,67 @@
 <%= render :partial => 'city'%>
 
 <!-- Display city description -->
-<p>
-<div class="col-md-offset-2">
+
+<div class="col-md-offset-3">
 
   <% @cities.each do |city| %>
-
-      <%= city.city_desc %>
+      <%cache city do%>
+        <%= city.city_desc %>
+      <% end %>
   <% end %>
-    </div>
-      </p>
+</div>
 
 
-  </div>
 
-
+<p>
 <div class="col-lg-14">
   <div class="col-md-offset-2">
   <h3>Notes</h3>
 
       <% @notes.each do |note| %>
+        <%cache note do%>
         <div class="col-md-4 column">
             <div class="panel panel-info">
                 <div class="panel-heading"> <%= link_to  note.title, note %></div>
                 <div class="panel-body"> <%= note.content %></div>
             </div>
         </div>
+        <% end %>
       <% end %>
 
 
 
   </div>
 </div>
+
+</p>
+
+
+<p>
+<div class="col-lg-14">
+  <div class="col-md-offset-2">
+
+  <h3>Blogs</h3>
+
+  <% @blogs.each do |blog| %>
+
+        <%cache blog do%>
+        <div class="col-md-4 column">
+          <div class="panel panel-info">
+            <div class="panel-heading"> <%= link_to  blog.title, blog %></div>
+            <div class="panel-body"> <%= blog.body %></div>
+          </div>
+        </div>
+    <% end %>
+    <%end%>
+
+
+
+  </div>
+</div>
+
+
+</p>
 
 </form>
 

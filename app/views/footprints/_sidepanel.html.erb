@@ -1,31 +1,59 @@
-<!-- Sidebar -->
-<div id="sidebar-wrapper">
-  <ul class="sidebar-nav">
-    <li class="sidebar-brand">
-      <a href="#">
-        Hi <%= @user.first_name unless (defined?(@user)).nil? %>
-      </a>
-    </li>
-    <li>
-      <%= link_to "News Feed", footprint_path %>
-    </li>
-    <li>
-      <%= link_to "Show All Blogs", blogs_path %>
-    </li>
-    <li>
-      <%= link_to "Link My blog", new_blog_path %>
-    </li>
-    <li>
-      <%= link_to "New Notes", new_note_path %>
-    </li>
-    <li>
-      <%= link_to "Show All Notes", notes_path %>
-    </li>
-    <li>
-      <%= link_to 'Check my profile', current_user %>
-    </li><li>
-    <%= link_to "Edit Profile", edit_user_registration_path %>
-  </li>
-  </ul>
-</div>
-<!-- /#sidebar-wrapper -->
+<nav class="navbar navbar-default sidebar" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to current_user do %>
+              Hi <%= @user.first_name unless (defined?(@user)).nil? %>
+              <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+          <% end %></li>
+
+        <li><%= link_to footprint_path do %>
+              News Feed
+              <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span>
+          <% end %></li>
+
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notes <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-tags"></span></a>
+          <ul class="dropdown-menu forAnimate" role="menu">
+            <li><%= link_to "New Notes", new_note_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Show All Notes", notes_path %></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blogs <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar"></span></a>
+          <ul class="dropdown-menu forAnimate" role="menu">
+            <li><%= link_to "Link My Blog",  new_blog_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Show All Blogs", blogs_path %></li>
+          </ul>
+        </li>
+
+        <li><%= link_to edit_user_registration_path do %>
+              Edit Profile
+              <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-pencil"></span>
+          <% end %></li>
+
+        <li><%= link_to "/categories/edit_categories" do %>
+              Edit interests
+              <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-heart-empty"></span>
+          <% end %></li>
+
+        <li><%= link_to :back do %>
+              Back
+              <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-arrow-left"></span>
+          <% end %></li>
+      </ul>
+    </div>
+  </div>
+</nav>

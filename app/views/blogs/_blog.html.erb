@@ -1,15 +1,45 @@
-<div>
-<h2><%= link_to_unless_current blog.title, blog %></h2>
 
-<div class="text-center">
-<%= image_tag blog.picture_url.to_s , :class => "img-thumbnail" , :style => "width:400px"  if blog.picture? %>
-</div>
-<br/><br/>
-<blockquote class="bg-primary">
-<%= blog.body%>
-</blockquote>
-  <h5 style="font-style:italic"><b>Check out my blog <%= link_to 'here',blog.link ,:style => "color:blue"%></b></h5><br/>
-<h5 class="blockquote-reverse">Footprinted by : <%= blog.author%> <%= 'anonymous' if (defined?(blog.author)).nil? %>
 
-  , <%= blog.city_name %></h5>
-</div>
+<article class="col-xs-12 col-sm-6 col-md-3">
+  <div class="panel panel-default">
+    <div class="panel-body">
+
+      <%= link_to blog , class:'zoom'  do %>
+          <%= image_tag blog.picture_url.to_s , :style => "width:400px"  if blog.picture? %>
+          <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+      <% end %>
+
+    </div>
+    <div class="panel-footer">
+      <h4><%= link_to_unless_current blog.title, blog %></h4>
+                    <span class="pull-right">
+                        <i id="like1" class="glyphicon glyphicon-thumbs-up" onclick="increaseCount()" ></i> <div id="like1-bs3"></div>
+                        <i id="dislike1" class="glyphicon glyphicon-thumbs-down"></i> <div id="dislike1-bs3"></div>
+                    </span>
+      <br/>
+    </div>
+  </div>
+</article>
+
+
+<script type="application/javascript">
+
+  function increaseCount(){
+
+  }
+    //= require twitter/bootstrap
+    $(document).on('page:load', function()  {
+        $('i.glyphicon-thumbs-up, i.glyphicon-thumbs-down').click(function(){
+            var $this = $(this),
+                    c = $this.data('count');
+            if (!c) c = 0;
+            c++;
+            $this.data('count',c);
+            $('#'+this.id+'-bs3').html(c);
+        });
+        $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    });
+</script>

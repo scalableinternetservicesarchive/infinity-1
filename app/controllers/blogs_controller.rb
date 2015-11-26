@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs =  Rails.cache.fetch(request.original_url, :expires_in  => 30.minutes ){@blogs = Blog.all}
   end
 
   # GET /blogs/1

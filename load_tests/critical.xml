@@ -146,6 +146,10 @@
 	        </http>
       	</request>
 
+      <request>
+        <http url='/blogs' version='1.1' method='GET'></http>
+      </request>
+
 	  	<thinktime value="2" random="true"></thinktime>
 	  
      	<request subst="true">

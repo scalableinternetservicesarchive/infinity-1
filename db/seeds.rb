@@ -45,7 +45,7 @@ City.create(city_name:'Paris', city_desc:'Paris, France’s capital, is a major 
 #@note6.save
 
 for i in 10000...15000
-  Category.create(name: 'Beaches'<<i)
+  Category.create(name: 'Beaches')
   City.create(city_name: 'LA'<<i, city_desc: 'Los Angeles is a sprawling Southern.')
   #@note6 = Note.new(city_name:'Los Angeles',title:'Beverly Hills'<<i,content:'Such a grand place')
   #@note6.categories << Category.find_by_name('Delicious food')

@@ -1,12 +1,13 @@
 
 
-<article class="col-xs-12 col-sm-6 col-md-3">
+<article class="col-xs-4 col-sm-60 col-md-4">
   <div class="panel panel-default">
     <div class="panel-body">
 
       <%= link_to blog , class:'zoom'  do %>
           <%= image_tag blog.picture_url.to_s , :style => "width:400px"  if blog.picture? %>
           <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+          <%=blog.author%>
       <% end %>
 
     </div>
@@ -17,6 +18,7 @@
                         <i id="dislike1" class="glyphicon glyphicon-thumbs-down"></i> <div id="dislike1-bs3"></div>
                     </span>
       <br/>
+
     </div>
   </div>
 </article>

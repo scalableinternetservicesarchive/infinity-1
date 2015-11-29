@@ -18,7 +18,7 @@ City.create(city_name: 'Los Angeles', city_desc: 'Los Angeles is a sprawling Sou
 City.create(city_name:'London', city_desc:'London, England’s capital, set on the River Thames, is a 21st-century city with history stretching back to Roman times. ' )
 City.create(city_name:'Paris', city_desc:'Paris, France’s capital, is a major European city and a global center for art, fashion, gastronomy and culture.' )
 
-#@note1 = Note.new(city_name:'Paris',title:'Ratatouille',content:'Italian food is so good!')
+#@note1 = Note.new(city:@w,title:'Ratatouille',content:'Italian food is so good!')
 #@note1.categories << Category.find_by_name('Delicious food')
 #@note1.save
 
@@ -46,15 +46,14 @@ City.create(city_name:'Paris', city_desc:'Paris, France’s capital, is a major 
 
 for i in 10000...15000
   Category.create(name: 'Beaches')
-  City.create(city_name: 'LA'<<i, city_desc: 'Los Angeles is a sprawling Southern.')
+  City.create(city_name: 'LA'<<i, city_desc: 'Los Angeles is a sprawling Southern city.')
   #@note6 = Note.new(city_name:'Los Angeles',title:'Beverly Hills'<<i,content:'Such a grand place')
   #@note6.categories << Category.find_by_name('Delicious food')
   #@note6.save
   #city.Note.new(city_name:'Los Angeles',title:'Beverly Hills'<<i,content:'Such a place')
-  city =
-  #Note.create(city_id: 1 , title:'Ratatouille',content:'Italian food is so good!')
+  #Note.create(id: i,city: @c , title:'Ratatouille',content:'Italian food is so good!',uid: 1,user_id: 5)
   Blog.create(city_name: 'Los Angeles'<<i, title:'Long Weekend @ LA',body: 'The United States’ second biggest cit',
-              link: 'http://www.urbantravelblog.com/guide/los-angeles/', picture: File.open(File.join(Rails.root, '/app/assets/images/LosAngelesBlog1.jpg')), author: 'Vince Robbins');
+  link: 'http://www.urbantravelblog.com/guide/los-angeles/', picture: File.open(File.join(Rails.root, '/app/assets/images/LosAngelesBlog1.jpg')), author: 'Vince Robbins');
 
 end
 

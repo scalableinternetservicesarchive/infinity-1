@@ -5,7 +5,9 @@
 </div>
 
   <%=form_tag({controller: "categories", action: "submit_categories"}, method: "get" ) do %>
+    <%=will_paginate @allcategories %>
   <%= render :partial => @allcategories %>
+
 
 <br/>
     <div><%= submit_tag 'Save', class:"btn btn-primary center-block" %></div>

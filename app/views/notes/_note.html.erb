@@ -1,6 +1,7 @@
 <div class="col-md-offset-2">
     <div class="col-md-8 well" >
     <h1><%= link_to  note.title, note   %></h1>
+    <h3><%= note.city_name%></h3>
     <p> <%= note.content %></p>
     <div>
       <span class="badge">Posted <%= Time.now.utc %></span>

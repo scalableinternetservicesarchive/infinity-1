@@ -83,11 +83,28 @@
 	          url='/d/users'
 	          version='1.1'
 	          method='POST'
-	          contents= 'user%5Bfirst_name%5D=Jack%%_username%%&amp;user%5Blast_name%5D=Harper&amp;user%5Bis_female%5D=false&amp;user%5Bdate_of_birth%281i%29%5D=2015&amp;user%5Bdate_of_birth%282i%29%5D=11&amp;user%5Bdate_of_birth%283i%29%5D=13&amp;user%5Bemail%5D=jack%%_username%%%40gmail.com&amp;user%5Bpassword%5D=footprints&amp;user%5Bpassword_confirmation%5D=footprints&amp;user%5Binterests%5D=Food&amp;commit=Sign+up'>
+	          contents= 'user%5Bfirst_name%5D=Jack%%_username%%&amp;user%5Blast_name%5D=Harper&amp;user%5Bis_female%5D=false&amp;user%5Bdate_of_birth%281i%29%5D=2015&amp;user%5Bdate_of_birth%282i%29%5D=11&amp;user%5Bdate_of_birth%283i%29%5D=13&amp;user%5Bemail%5D=jack%%_username%%%40gmail.com&amp;user%5Bpassword%5D=footprints&amp;user%5Bpassword_confirmation%5D=footprints&amp;commit=Sign+up'>
 	        </http>
       	</request>
 
-      	<thinktime value="5" random="true"></thinktime>
+      	<thinktime value="1" random="true"></thinktime>
+
+	  <request>
+		<http url='/categories/edit_categories' version='1.1' method='GET'></http>
+	  </request>
+
+	  <request subst="true">
+		<http
+                url='/d/users'
+				version='1.1'
+				method='POST'
+				contents='cat%5B%5D=Hiking&amp;cat%5B%5D=Delicious+food&amp;commit=Save'>
+		</http>
+	  </request>
+
+      <request>
+        <http url='/' version='1.1' method='GET'></http>
+      </request>
 
       	<request>
         	<http url='/blogs' version='1.1' method='GET'></http>

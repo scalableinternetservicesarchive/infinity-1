@@ -58,3 +58,5 @@ gem 'fog',                     '1.26.0'
 #gem 'minitest'
 
 gem 'jquery-turbolinks'
+
+gem 'will_paginate'

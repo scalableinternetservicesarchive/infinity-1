@@ -41,7 +41,7 @@ user.password = 'mauli1991'
 user.save
 
 
-for i in 1...50
+for i in 1...5000
 
   tempnote  = Note.create(city_name:city_arr[c1],title:'Magnificient Eiffel Tower',content:'Such a picturesque place')
   tempnote.categories << categories_arr[c2]

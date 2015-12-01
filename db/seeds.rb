@@ -6,14 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+for i in 1...50000
 c1 = Category.create(name: 'Beaches')
 c2 = Category.create(name: 'Adventure Sports')
 c3 = Category.create(name: 'Hiking')
 c4 = Category.create(name: 'Delicious food')
 c5 = Category.create(name: 'Amusement parks')
 c6 = Category.create(name: 'Trekking')
+end
 categories_arr=[c1,c2,c3,c4,c5,c6]
+
 
 City.create(city_name: 'Los Angeles', city_desc: 'Los Angeles is a sprawling Southern California city famed as the center of the nation’s film and television industry.')
 City.create(city_name:'London', city_desc:'London, England’s capital, set on the River Thames, is a 21st-century city with history stretching back to Roman times. ' )
@@ -27,21 +29,29 @@ Blog.create(city_name: 'Paris', title:'The Hip Paris Blog',body: 'Le Procope: A 
 
 
 
+
 city_arr= ['Los Angeles','London','Paris']
 
 c1=0
 c2=0
 
-for i in 10000...15000
- tempnote  = Note.create(city_name:city_arr[c1],title:'Magnificient Eiffel Tower',content:'Such a picturesque place')
- tempnote.categories << categories_arr[c2]
- tempblog = Blog.create(city_name: city_arr[i], title:'Long Weekend'<<i,body: 'The United States’ second biggest cit',
-  link: 'http://www.urbantravelblog.com/guide/los-angeles/', picture: File.open(File.join(Rails.root, '/app/assets/images/LosAngelesBlog1.jpg')), author: 'Vince Robbins');
+
+user=User.create(email:'calvin2@gmail.com',first_name:'calvin',last_name:'hobbes',date_of_birth:'2015-11-30 08:59:38',is_female:'0' )
+user.password = 'mauli1991'
+user.save
+
+
+for i in 1...50
+
+  tempnote  = Note.create(city_name:city_arr[c1],title:'Magnificient Eiffel Tower',content:'Such a picturesque place')
+  tempnote.categories << categories_arr[c2]
+  tempblog = Blog.create(city_name: city_arr[i], title:'Long Weekend'<<i,body: 'The United States’ second biggest cit',
+                         link: 'http://www.urbantravelblog.com/guide/los-angeles/', picture: File.open(File.join(Rails.root, '/app/assets/images/LosAngelesBlog1.jpg')), author: 'Vince Robbins');
   tempblog.categories << categories_arr[c2]
   c1=(c1+1)%city_arr.length
   c2=(c2+1)%categories_arr.length
- end
 
+  BlogComment.create(body:'What a blog!',blog_id:i,user_id:user.id)
+  Comment.create(body:'My comment ',note_id:i,user_id:user.id)
 
-
-
+end

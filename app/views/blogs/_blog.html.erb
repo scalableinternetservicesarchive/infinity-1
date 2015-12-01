@@ -1,4 +1,5 @@
 <div>
+  <% cache do %>
 <h2><%= link_to_unless_current blog.title, blog %></h2>
 
 <div class="text-center">
@@ -12,4 +13,5 @@
 <h5 class="blockquote-reverse">Footprinted by : <%= blog.author%> <%= 'anonymous' if (defined?(blog.author)).nil? %>
 
   , <%= blog.city_name %></h5>
+      <% end %>
 </div>

@@ -11,7 +11,7 @@
 <h3 style="alignment: left" >Comments</h3>
 </div>
 <div id="comments" class="col-sm-offset-2">
-<%= render :partial => @note.comments %>
+<%= render :partial => @note.comments.includes(:user) %>
 <div class="col-md-15 column">
   <div class="page-header">
     <h3>Leave your comment</h3>

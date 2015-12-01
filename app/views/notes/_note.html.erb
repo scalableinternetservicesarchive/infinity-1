@@ -1,26 +1,18 @@
-<br xmlns="http://www.w3.org/1999/html">
-  <br><br>
-
-
-  <div class="col-md-offset-2">
-  <div class="col-md-5 column">
-    <div class="panel panel-primary">
-      <div class="panel-heading"> <%= link_to  note.title, note   %></div>
-      <div class="panel-body"> <%= note.content %></div>
-    </div>
-  </div>
-  </div>
-
-
-  <br><br><br><br><br><br><br>
-
-
-  <!-- <button type="submit" formaction=edit_note_path(@note) class="btn btn-primary">Edit</button> -->
 <div class="col-md-offset-2">
-  <div class="col-md-5 column">
-
-  <%= link_to 'Edit', edit_note_path(note) %> |
-  <%= link_to 'Back', notes_path %>
-  <%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %>
-</div>
+    <div class="col-md-8 well" >
+    <h1><%= link_to  note.title, note   %></h1>
+    <h3><%= note.city_name%></h3>
+    <p> <%= note.content %></p>
+    <div>
+      <span class="badge">Posted <%= Time.now.utc %></span>
+      <div class="pull-right">
+      <span class="label label-default">food</span>
+      <span class="label label-primary">travel</span>
+      <span class="label label-success">adventure</span>
+      <span class="label label-info">fun</span>
+      <span class="label label-warning">outing</span>
+      <span class="label label-danger">blissful</span></div>
     </div>
+    <hr>
+    </div>
+</div>

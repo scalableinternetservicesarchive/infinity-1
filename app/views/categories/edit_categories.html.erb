@@ -8,7 +8,8 @@
     <% cache do %>
   <%=form_tag({controller: "categories", action: "submit_categories"}, method: "get" ) do %>
   <%= render :partial => @allcategories %>
-    <% end %>
+    <%end%>
 <br/>
     <div><%= submit_tag 'Save', class:"btn btn-primary center-block" %></div>
-<%end%>
+
+<% end %>

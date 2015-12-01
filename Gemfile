@@ -4,10 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
-gem 'mysql2','~> 0.3.18'
-# gem 'sqlite3'
-
-gem 'net-ssh'
+#gem 'mysql2','~> 0.3.18'
+gem 'sqlite3'
 
 gem 'dalli'
 
@@ -21,12 +19,6 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'bootstrap-sass', '3.3.5.0'
-
-
-# Sunspot & Solr Gem for Full-text search
-#gem 'sunspot_rails'
-#gem 'sunspot_solr'
-
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -58,11 +50,6 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-
-
-#  gem 'sunspot_solr'
-
 end
 
 gem 'devise'
@@ -71,7 +58,8 @@ gem 'mini_magick',             '3.8.0'
 gem 'fog',                     '1.26.0'
 
 
-
 #gem 'test-unit'
 
 #gem 'minitest'
+
+gem 'jquery-turbolinks'

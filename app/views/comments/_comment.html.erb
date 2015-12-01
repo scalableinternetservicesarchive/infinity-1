@@ -1,11 +1,22 @@
-<%= div_for comment do %>
-    <p>
-      <strong>
-        Posted <%= time_ago_in_words(comment.created_at) %> ago
-      </strong>
-      <br/>
-      <% cache do %>
-      <%= comment.body %>
-      <% end %>
-    </p><br/>
+<% cache do %>
+       <ul class="media-list">
+          <li class="media">
+            <a class="pull-left" href="#">
+              <%= image_tag comment.user.picture_url.to_s , :class => "media-object img-circle" ,
+                            :style => "width:75px;height:75px;"   unless (defined?( comment.user.picture)).nil? %>
+
+             </a>
+            <div class="media-body">
+              <div class="well well-lg">
+                <h4 class="media-heading text-uppercase reviews"><%= comment.user.first_name unless (defined?( comment.user.first_name)).nil? %>
+                  <%= comment.user.last_name unless (defined?( comment.user.last_name)).nil? %></h4>
+                <ul class="media-date text-uppercase reviews list-inline">
+                  <span class="date sub-text">Posted <%= time_ago_in_words(comment.created_at) %> ago </span>
+                </ul>
+                <p class="media-comment">
+                  <%= comment.body %>
+                </p>
+               </div>
+            </div>
+            </li></ul>
 <% end %>

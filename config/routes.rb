@@ -25,12 +25,23 @@ Rails.application.routes.draw do
   devise_for :users, :path_prefix => 'd'
   get '/users/categories', to: 'users#show_categories'
   resources :users, :only => [:show]
-  
+
+  devise_scope :user do
+    authenticated :user do
+      root 'footprints#index', as: :authenticated_root
+    end
+
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'footprints#index',  as: :footprint
+  root 'footprints#index',  as: :footprint
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

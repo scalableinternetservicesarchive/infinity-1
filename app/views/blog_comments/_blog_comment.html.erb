@@ -1,25 +1,20 @@
-<div class="detailBox">
-  <div class="actionBox">
+<ul class="media-list">
+  <li class="media">
+    <a class="pull-left" href="#">
+      <%= image_tag blog_comment.user.picture_url.to_s , :class => "media-object img-circle" ,
+                    :style => "width:75px;height:75px;"   unless (defined?( blog_comment.user.picture)).nil? %>
 
-<%= div_for blog_comment do %>
-    <p>
-      <strong>
-        <span class="date sub-text">Posted <%= time_ago_in_words(blog_comment.created_at) %> ago </span>
-      </strong>
-      <br/>
-
-
-<div class="commenterImage" style="width:50px">
-      <%= image_tag blog_comment.user.picture_url.to_s , :class => "img-thumbnail" ,
-                    :style => "width:100px;height:50px;"   unless (defined?( blog_comment.user.picture)).nil? %>
-</div>
-      <i><%= blog_comment.user.first_name unless (defined?( blog_comment.user.first_name)).nil? %>
-      <%= blog_comment.user.last_name unless (defined?( blog_comment.user.last_name)).nil? %></i>
-
-        <div class="commentText">
-      <%= blog_comment.body %>
+    </a>
+    <div class="media-body">
+      <div class="well well-lg">
+        <h4 class="media-heading text-uppercase reviews"><%= blog_comment.user.first_name unless (defined?( blog_comment.user.first_name)).nil? %>
+          <%= blog_comment.user.last_name unless (defined?( blog_comment.user.last_name)).nil? %></h4>
+        <ul class="media-date text-uppercase reviews list-inline">
+          <span class="date sub-text">Posted <%= time_ago_in_words(blog_comment.created_at) %> ago </span>
+        </ul>
+        <p class="media-comment">
+          <%= blog_comment.body %>
+        </p>
+      </div>
     </div>
-    </p>
-<% end %>
-  </div>
-</div>
+  </li></ul>

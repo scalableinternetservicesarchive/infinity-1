@@ -1,42 +1,28 @@
 <p id="notice"><%= notice %></p>
-
-<div class="col-md-offset-2">
-  <div class="col-md-20 column">
-
 <%= render :partial =>@note %>
-
 
 <!--  <button type="submit" formaction=edit_note_path(@note) class="btn btn-primary">Edit</button> -->
 <!--
 <%= link_to 'Edit', edit_note_path(@note) %> |
 <%= link_to 'Back', notes_path %>
 -->
-
+<div class="container"></div>
+<div class="page-header col-sm-offset-2">
+<h3 style="alignment: left" >Comments</h3>
+</div>
+<div id="comments" class="col-sm-offset-2">
+<%= render :partial => @note.comments %>
+<div class="col-md-15 column">
+  <div class="page-header">
+    <h3>Leave your comment</h3>
   </div>
-</div>
-<br><br><br>
-
-    <div class="col-md-offset-2"><p>Comments
-<div id="comments">
-  <%= render :partial => @note.comments %>
-
-</div>
-      </p>
-</div>
-
-<div class="col-md-offset-2">
-  <div class="col-md-15 column">
 <%= form_for [@note, Comment.new] do |f| %>
-
-      <h5><%= f.label :body, "Add New Comment" %></h5>
-
+      <div style="width:500px; padding:10px;margin:10px;">
+        <div class="status-upload" style="width:500px; padding:10px;margin:10px;">
       <%= image_tag @user.picture_url.to_s , :class => "img-thumbnail" , :style => "width:50px"  if @user.picture? %>
       <b><%= @user.first_name %> <%= @user.last_name %></b>
-      <br/><br/><%= f.text_area :body%>
-      <br/><%= f.submit "Add"%>
+      <br/><br/><%= f.text_area :body, :placeholder=>"Share your Thoughts.." , style:"width:400px"%><br/><br/>
+      <%= f.submit "Add", class:"btn btn-success green"%>
+</div></div>
 
-
-<% end %>
-      </div></div>
-
-
+<% end %></div></div>

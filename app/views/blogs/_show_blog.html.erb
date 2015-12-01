@@ -1,0 +1,16 @@
+<div>
+  <div class="page-header">
+  <h3><%= link_to_unless_current @blog.title, blog %></h3>
+</div>
+  <div class="text-center">
+    <%= image_tag @blog.picture_url.to_s , :class => "img-thumbnail" , :style => "width:400px"  if blog.picture? %>
+  </div>
+  <br/><br/>
+  <blockquote class="bg-primary">
+    <%= @blog.body%>
+  </blockquote>
+  <h5 style="font-style:italic"><b>Check out my blog <%= link_to 'here',@blog.link ,:style => "color:blue"%></b></h5><br/>
+  <h5 class="blockquote-reverse">Footprinted by : <%= @blog.author%> <%= 'anonymous' if (defined?(@blog.author)).nil? %>
+
+    , <%= @blog.city_name %></h5>
+</div>

@@ -210,12 +210,11 @@ section{
 
 body{
 
-    background: url('./login.png') repeat;
-
+    background: url('./footprints.jpg') repeat;
+    background-position: 100%;
 
 }
 
 #wrapper {
-    background-color: rgba(248, 247, 216, 0);
-
+    background-color: rgba(248, 247, 216, 0.5);
 }

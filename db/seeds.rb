@@ -6,12 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-for i in 1...50000
+for i in 1...5000
 c1 = Category.create(name: 'Beaches')
 c2 = Category.create(name: 'Adventure Sports')
 c3 = Category.create(name: 'Hiking')
 c4 = Category.create(name: 'Delicious food')
-c5 = Category.create(name: 'Amusement parks')
+c5 = Category.create(name: 'Am
+usement parks')
 c6 = Category.create(name: 'Trekking')
 end
 categories_arr=[c1,c2,c3,c4,c5,c6]

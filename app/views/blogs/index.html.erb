@@ -8,7 +8,9 @@
 
   <div class="container mt40">
     <section class="row">
-      <%= will_paginate @blogs  %>
+      <div class="text-center">
+        <%=will_paginate @blogs , renderer: BootstrapPagination::Rails%>
+      </div>
 <%= render :partial=>@blogs %>
 
 

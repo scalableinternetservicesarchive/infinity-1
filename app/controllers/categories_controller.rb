@@ -23,8 +23,10 @@ class CategoriesController < ApplicationController
 
   def edit_categories
     #@user =  current_user
-    @allcategories = Category.all
+    #@allcategories = Category.all
     #@user_categories = @user.categories
+
+    @allcategories =  Rails.cache.fetch(request.original_url){@allcategories = Category.all}
   end
 
   def submit_categories

@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
-#gem 'mysql2','~> 0.3.18'
-gem 'sqlite3'
+gem 'mysql2','~> 0.3.18'
+#gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -58,6 +58,8 @@ gem 'fog',                     '1.26.0'
 #gem 'minitest'
 
 gem 'jquery-turbolinks'
+
+gem "bullet"
 
 gem 'will_paginate'
 

@@ -48,6 +48,9 @@ GEM
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
     builder (3.2.2)
+    bullet (4.14.10)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.9.0)
     byebug (6.0.2)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
@@ -239,6 +242,7 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uniform_notifier (1.9.0)
     warden (1.2.3)
       rack (>= 1.0)
     web-console (2.2.1)
@@ -255,6 +259,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (= 3.3.5.0)
+  bullet
   byebug
   carrierwave (= 0.10.0)
   coffee-rails (~> 4.1.0)

@@ -9,7 +9,7 @@
             <%=will_paginate @allcategories , renderer: BootstrapPagination::Rails%>
     </div>
 
-  <%= render :partial => @allcategories %>
+  <%= render :partial => @categories %>
 <br/>
     <div><%= submit_tag 'Save', class:"btn btn-primary center-block" %></div>
 <%end%>

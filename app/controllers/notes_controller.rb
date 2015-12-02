@@ -19,8 +19,10 @@ class NotesController < ApplicationController
 
   # GET /notes/new
   def new
-    @note = Note.new
+    @note = Note.new  if stale?(Category.all)
     @tags = Category.all
+
+
   end
 
   # GET /notes/1/edit

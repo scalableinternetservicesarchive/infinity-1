@@ -23,8 +23,7 @@ class CategoriesController < ApplicationController
 
   def edit_categories
     #@user =  current_user
-    @allcategories = Category.all
-    #@allcategories = Category.paginate(:page => params[:page], :per_page => 5)
+    @allcategories = Category.all if stale?(current_user.categories) or stale?(Category.all)
     #@user_categories = @user.categories
   end
 

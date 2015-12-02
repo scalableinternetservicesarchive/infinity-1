@@ -4,8 +4,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
-    #@blogs = Blog.paginate(:page => params[:page], :per_page => 5)
+    @blogs = Blog.all if stale?(Blog.all)
   end
 
   # GET /blogs/1
@@ -19,6 +18,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/new
   def new
+    expires_in(864000.seconds, public: true)
     @blog = Blog.new
   end
 

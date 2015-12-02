@@ -27,10 +27,8 @@ class NotesController < ApplicationController
   # GET /notes/new
   def new
     @note = Note.new  #if stale?(Category.all)
-    @tags = Category.all
-
-
-  end
+    @tags = Rails.cache.fetch(request.original_url ){@tags = Category.all}
+ end
 
   # GET /notes/1/edit
   def edit

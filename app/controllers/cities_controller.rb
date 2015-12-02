@@ -26,7 +26,7 @@ class CitiesController < ApplicationController
 
     @cities = City.where("city_name = ?",params[:search])
 
-      @notes = Rails.cache.fetch ( query ) {  Note.where("city_name like ?",temp)}
+      @notes = Rails.cache.fetch ( query ) {  Note.where("content like ?",temp)}
 
       #@category = Category.where("name = ?",params[:search])
 

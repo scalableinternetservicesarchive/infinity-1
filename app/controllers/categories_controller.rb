@@ -31,7 +31,7 @@ class CategoriesController < ApplicationController
    # @allcategories = Category.paginate(:page => params[:page], :per_page => 5)
     #@user_categories = @user.categories
 
-    @allcategories =  Rails.cache.fetch(request.original_url){@allcategories = Category.paginate(:page => params[:page], :per_page => 5)}  if stale?(current_user.categories) or stale?(Category.all)
+    @allcategories =  Rails.cache.fetch(request.original_url){@allcategories = Category.paginate(:page => params[:page], :per_page => 5)}
   end
 
   def submit_categories

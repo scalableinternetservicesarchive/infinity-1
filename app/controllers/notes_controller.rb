@@ -26,7 +26,7 @@ class NotesController < ApplicationController
 
   # GET /notes/new
   def new
-    @note = Note.new  if stale?(Category.all)
+    @note = Note.new  #if stale?(Category.all)
     @tags = Category.all
 
 

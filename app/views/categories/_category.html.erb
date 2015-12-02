@@ -1,5 +1,8 @@
 <tr class="info"><td colspan="3"><%=image_tag(category.name+".jpg",:class => "img-thumbnail", height: '300', width: '600') %></td></tr>
 
 <tr class="success"><td class="text-center",><big><%= category.name %></big></td>
-<td class="text-center"><%= check_box_tag 'cat[]',category.name, (current_user.categories.include? category) %>
+
+
+<td class="text-center"><%= check_box_tag 'cat[]',category.name, ( @current_users_categories.include? category) %>
+
 </td></tr>

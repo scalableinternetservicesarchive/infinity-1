@@ -1,0 +1,136 @@
+2015-11-30 01:04:39[WARN] user: ms
+http://localhost:3000/notes/1
+N+1 Query detected
+  Comment => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240359923720'
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240359658980'
+
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240359923720'
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240359658980'2015-11-30 01:06:55[WARN] user: ms
+http://localhost:3000/notes/1
+N+1 Query detected
+  Comment => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'
+
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'2015-11-30 01:08:26[WARN] user: ms
+http://localhost:3000/notes/1
+N+1 Query detected
+  Comment => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'
+
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'2015-11-30 01:14:15[WARN] user: ms
+http://localhost:3000/notes/1
+N+1 Query detected
+  Comment => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'
+
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'2015-11-30 01:15:39[WARN] user: ms
+http://localhost:3000/notes/1
+N+1 Query detected
+  Comment => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'
+  /home/ms/Desktop/InfinityProject/infinity-1/app/controllers/notes_controller.rb:24:in `show'
+
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'
+/home/ms/Desktop/InfinityProject/infinity-1/app/controllers/notes_controller.rb:24:in `show'2015-11-30 01:29:12[WARN] user: ms
+http://localhost:3000/notes/1
+N+1 Query detected
+  Comment => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'
+
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'2015-11-30 01:37:36[WARN] user: ms
+http://localhost:3000/notes/1
+N+1 Query detected
+  Comment => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'
+
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'2015-11-30 01:48:13[WARN] user: ms
+http://localhost:3000/notes/1
+N+1 Query detected
+  Comment => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'
+
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'2015-11-30 01:50:42[WARN] user: ms
+http://localhost:3000/notes/1
+N+1 Query detected
+  Comment => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'
+
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__4389976203712066167_70240519243320'
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__3682296623382571132_70240519850920'2015-11-30 18:50:53[WARN] user: ms
+http://localhost:3000/notes/1
+N+1 Query detected
+  Comment => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__2787956555383319069_70267659928120'
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__2614730339950510627_70267662707780'
+
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__2787956555383319069_70267659928120'
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__2614730339950510627_70267662707780'2015-11-30 18:52:49[WARN] user: ms
+http://localhost:3000/notes
+Unused Eager Loading detected
+  Note => [:user]
+  Remove from your finder: :includes => [:user]
+
+2015-11-30 18:58:35[WARN] user: ms
+http://localhost:3000/notes/1
+N+1 Query detected
+  Comment => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__2787956555383319069_70267659928120'
+  /home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__2614730339950510627_70267662707780'
+
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/comments/_comment.html.erb:5:in `_app_views_comments__comment_html_erb__2787956555383319069_70267659928120'
+/home/ms/Desktop/InfinityProject/infinity-1/app/views/notes/show.html.erb:14:in `_app_views_notes_show_html_erb__2614730339950510627_70267662707780'2015-11-30 19:31:10[WARN] user: ms
+http://localhost:3000/categories/edit_categories
+Unused Eager Loading detected
+  Category => [:users]
+  Remove from your finder: :includes => [:users]
+
+2015-11-30 19:32:57[WARN] user: ms
+http://localhost:3000/categories/edit_categories
+Unused Eager Loading detected
+  Category => [:categories_users]
+  Remove from your finder: :includes => [:categories_users]
+
+2015-11-30 20:05:09[WARN] user: ms
+http://localhost:3000/categories/edit_categories
+Unused Eager Loading detected
+  Category => [:categories_users]
+  Remove from your finder: :includes => [:categories_users]
+

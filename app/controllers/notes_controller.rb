@@ -5,7 +5,12 @@ class NotesController < ApplicationController
   # GET /notes.json
   def index
     :notes_params
-    @notes = Note.all
+    @notes = Note.paginate(:page => params[:page], :per_page => 5)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @notes }
+    end
     #@notes = Note.paginate(:page => params[:page], :per_page => 5)
     @user =  current_user
   end
@@ -14,7 +19,9 @@ class NotesController < ApplicationController
   # GET /notes/1.json
   def show
     @user = current_user
-    @noteComments = @note.comments
+    @noteComments = @note.comments.includes(:user).where('notes.id = ?',@notes)
+    #User.includes(:posts).where('posts.name = ?', 'example')
+
   end
 
   # GET /notes/new

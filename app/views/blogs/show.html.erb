@@ -10,7 +10,7 @@
   <h3 style="alignment: left" >Comments</h3>
 </div>
 <div id="comments">
-  <%= render :partial => @blog.blog_comments %>
+  <%= render :partial => @blog.blog_comments.includes(:user) %>
 </div>
 
 <div class="col-md-15 column">

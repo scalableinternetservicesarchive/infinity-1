@@ -2,7 +2,9 @@
 
   <!-- Page Content -->
   <div id="page-content-wrapper">
-    <%#=will_paginate @notes %>
+    <div class="text-center">
+      <%=will_paginate @notes , renderer: BootstrapPagination::Rails%>
+    </div>
         <%= render :partial => @notes %>
     <br>
   </div>

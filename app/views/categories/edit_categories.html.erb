@@ -3,15 +3,14 @@
 <div class="page-header">
 <h1>Please edit your Interests, <%= current_user.first_name %></h1>
 </div>
-
+    <% cache do %>
   <%=form_tag({controller: "categories", action: "submit_categories"}, method: "get" ) do %>
     <div class="text-center">
             <%=will_paginate @allcategories , renderer: BootstrapPagination::Rails%>
     </div>
 
   <%= render :partial => @allcategories %>
-
-
+    <%end%>
 <br/>
     <div><%= submit_tag 'Save', class:"btn btn-primary center-block" %></div>
 <%end%>

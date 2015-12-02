@@ -5,7 +5,9 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     #@blogs = Blog.all
-    @blogs = Blog.paginate(:page => params[:page], :per_page => 5) if stale?(Blog.all)
+  #  @blogs = Blog.paginate(:page => params[:page], :per_page => 5) if stale?(Blog.all)
+   # @blogs = Blog.all
+    @blogs =  Rails.cache.fetch(request.original_url, :expires_in  => 30.minutes ){@blogs = Blog.paginate(:page => params[:page], :per_page => 5) if stale?(Blog.all)}
   end
 
   # GET /blogs/1

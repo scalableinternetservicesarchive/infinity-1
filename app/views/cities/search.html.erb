@@ -4,37 +4,36 @@
 <%= render :partial => 'city'%>
 
 <!-- Display city description -->
+
+
+
+
 <p>
-<div class="col-md-offset-2">
-
-  <% @cities.each do |city| %>
-
-      <%= city.city_desc %>
-  <% end %>
-    </div>
-      </p>
-
-
-  </div>
-
-
 <div class="col-lg-14">
   <div class="col-md-offset-2">
-  <h3>Notes</h3>
 
-      <% @notes.each do |note| %>
+    <% if @notes.present? %>
+    <% cache do %>
+        <h3>Notes</h3>
+      <% @notes.each do |note|   %>
         <div class="col-md-4 column">
             <div class="panel panel-info">
                 <div class="panel-heading"> <%= link_to  note.title, note %></div>
                 <div class="panel-body"> <%= note.content %></div>
             </div>
         </div>
+        <% end %>
+
       <% end %>
-
-
-
+    <%else %>
+        <h4>No results matching your searh query</h4>
+    <% end %>
   </div>
 </div>
+
+</p>
+
+
 
 </form>
 

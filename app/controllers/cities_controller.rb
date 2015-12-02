@@ -7,37 +7,30 @@ class CitiesController < ApplicationController
 
   end
 
-
-  def search
-    String query = params[:search]
-    query = "%"+query+"%"
-    puts(query)
-  #:set_city
-#    @cities = City.all
- # pts(params[:search])
-    if params[:search]
-      @cities = City.where("city_name = ?",params[:search])
-
-      @notes = Note.where("city_name = ?", params[:search])
-    end
-
-    # search categories table if city is note entered
-
-    if @cities.empty?
-      @category = Category.where("name = ?",params[:search])
-
-      puts(@category.name)
-      if @category != nil
-
-        @notes = Note.where("content like ? ",query)
-
-      end
-    end
-
-    #@notes = Note.where(:city_name => params[:search]).joins(:cities)
+  def caching_disabled?
+    ActionController::Base.perform_caching.blank?
   end
 
+# Provide full-text Search functionality to search cities, notes
 
+  def search
+
+    String query = params[:search]
+    temp= "%"+query+"%"     # change for solr
+
+  if caching_disabled?
+    puts("Caching disabled")
+  end
+
+    #@notes = Rails.cache.read(query)
+
+    @cities = City.where("city_name = ?",params[:search])
+
+      @notes = Rails.cache.fetch ( query ) {  Note.where("content like ? ",temp)}
+
+      #@category = Category.where("name = ?",params[:search])
+
+  end
   # GET /cities/1
   # GET /cities/1.json
   def show

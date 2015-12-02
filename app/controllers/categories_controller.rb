@@ -23,9 +23,12 @@ class CategoriesController < ApplicationController
 
   def edit_categories
     #@user =  current_user
-    #@allcategories = Category.all if stale?(current_user.categories) or stale?(Category.all)
+    @current_users_categories = Category.joins(:categories_users).where('categories_users.user_id' => current_user)
+    #@allcategories = Category.all
+    #Album.find(:all, :limit => 20, :include => [:band])
+    #@allcategories = Category.paginate(:page => params[:page], :per_page => 5)
     #allcategories = Category.all
-    #@allcategories = Category.paginate(:page => params[:page], :per_page => 5) if stale?(current_user.categories) or stale?(Category.all)
+   # @allcategories = Category.paginate(:page => params[:page], :per_page => 5)
     #@user_categories = @user.categories
 
     @allcategories =  Rails.cache.fetch(request.original_url){@allcategories = Category.paginate(:page => params[:page], :per_page => 5) if stale?(current_user.categories) or stale?(Category.all)}

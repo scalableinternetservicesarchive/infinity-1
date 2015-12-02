@@ -9,9 +9,13 @@
 <div class="page-header">
   <h3 style="alignment: left" >Comments</h3>
 </div>
-<div id="comments">
-  <%= render :partial => @blog.blog_comments.includes(:user) %>
+<div class="text-center">
+  <%=will_paginate @blogComments , renderer: BootstrapPagination::Rails%>
 </div>
+<div id="comments">
+  <%= render :partial => @blogComments.includes(:user) %>
+</div>
+
 
 <div class="col-md-15 column">
   <div class="page-header">

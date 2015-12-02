@@ -19,8 +19,8 @@ class NotesController < ApplicationController
   # GET /notes/1.json
   def show
     @user = current_user
-    @noteComments = @note.comments.includes(:user).where('notes.id = ?',@notes)
-    #User.includes(:posts).where('posts.name = ?', 'example')
+    #@noteComments = @note.comments.includes(:user).where('notes.id = ?',@notes)
+    @noteComments = @note.comments.paginate(:page => params[:page], :per_page => 2)
 
   end
 

@@ -10,8 +10,11 @@
 <div class="page-header col-sm-offset-2">
 <h3 style="alignment: left" >Comments</h3>
 </div>
+<div class="text-center">
+  <%=will_paginate @noteComments , renderer: BootstrapPagination::Rails%>
+</div>
 <div id="comments" class="col-sm-offset-2">
-<%= render :partial => @note.comments.includes(:user) %>
+<%= render :partial => @noteComments.includes(:user) %>
 <div class="col-md-15 column">
   <div class="page-header">
     <h3>Leave your comment</h3>

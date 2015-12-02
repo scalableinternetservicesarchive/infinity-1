@@ -13,7 +13,6 @@ class CommentsController < ApplicationController
     #@comment = @post.comments.create!(params[:comment])
     @comment = @note.comments.create!(params.require(:comment).permit!)
     current_user.comments << @comment
-
     redirect_to @note
   end
 end

@@ -12,7 +12,8 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
     @user = current_user
-    @blogComments = @blog.blog_comments
+    @blogComments = @blog.blog_comments.paginate(:page => params[:page], :per_page => 2)
+    ##@allcategories = Category.paginate(:page => params[:page], :per_page => 5)
 
   end
 

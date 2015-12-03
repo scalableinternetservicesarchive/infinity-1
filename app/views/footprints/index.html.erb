@@ -1,9 +1,9 @@
 <%= render :partial => 'cities/city' %>
 <div class="text-center">
-  <%=will_paginate @notes , renderer: BootstrapPagination::Rails%>
+  <%=will_paginate @notes_feed , renderer: BootstrapPagination::Rails%>
 </div>
-<%= render :partial => @notes %>
+<%= render :partial => @notes_feed %>
 <div class="text-center">
-  <%=will_paginate @blogs , renderer: BootstrapPagination::Rails%>
+  <%=will_paginate @blogs_feed , renderer: BootstrapPagination::Rails%>
 </div>
-<%= render :partial => @blogs %>
+<%= render :partial => @blogs_feed %>

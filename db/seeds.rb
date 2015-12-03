@@ -14,7 +14,7 @@ c6 = Category.create(name: 'Trekking')
 
 
 
-for i in 1...2000
+for i in 1...20
 Category.create(name: 'Beaches')
 Category.create(name: 'Adventure Sports')
 Category.create(name: 'Hiking')
@@ -32,7 +32,7 @@ City.create(city_name:'Tokyo', city_desc:'Japananese capital and who does not lo
 
 
 City.create(city_name:'Paris', city_desc:'Paris, France’s capital, is a major European city and a global center for art, fashion, gastronomy and culture.' )
-for i in 1...2000
+for i in 1...200
 Blog.create(city_name: 'Los Angeles', title:'Long Weekend @ LA',body: 'The United States’ second biggest city has got it all. Beaches, boulevards, baseball and Beverly hills.',
             link: 'http://www.urbantravelblog.com/guide/los-angeles/', picture: File.open(File.join(Rails.root, '/app/assets/images/LosAngelesBlog1.jpg')), author: 'Vince Robbins');
 
@@ -65,7 +65,7 @@ user.password = 'mauli1991'
 user.save
 
 
-for i in 1...50000
+for i in 1...50
 
   tempnote  = Note.create(city_name:city_arr[c1],title:'Magnificient Eiffel Tower',content:'Such a picturesque place')
   tempnote.categories << categories_arr[c2]

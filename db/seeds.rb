@@ -12,7 +12,7 @@ c4 = Category.create(name: 'Delicious food')
 c5 = Category.create(name: 'Amusement parks')
 c6 = Category.create(name: 'Trekking')
 
-for i in 1...1000
+for i in 1...2000
 Category.create(name: 'Beaches')
 Category.create(name: 'Adventure Sports')
 Category.create(name: 'Hiking')
@@ -47,7 +47,7 @@ user.password = 'mauli1991'
 user.save
 
 
-for i in 1...5000
+for i in 1...50000
 
   tempnote  = Note.create(city_name:city_arr[c1],title:'Magnificient Eiffel Tower',content:'Such a picturesque place')
   tempnote.categories << categories_arr[c2]
